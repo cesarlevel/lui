@@ -460,7 +460,6 @@ html {
 html,
 body {
   background: #F6F8F9;
-  @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
 }
 
 /**
@@ -502,6 +501,11 @@ a:hover, a:active, a:focus {
 
 *::selection {
   background: #DCE7FE;
+}
+
+html,
+body {
+  @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
 }
 
 html, .root {
