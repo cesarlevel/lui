@@ -1,0 +1,89 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the card component.
+// -----------------------------------------------------------------------------
+
+.card {
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 1px rgba($muted, 0.03), 0 1px 2px 0 rgba($muted, 0.24), 0 4px 4px 0 rgba($muted, 0.05);
+    border-radius: $border-radius;
+}
+
+.card-title {
+    @include rem(padding, $space-default $space-default 0 $space-default);
+    @include display-flex;
+}
+
+.card-subtitle {
+    @include rem(padding-bottom, $space-default);
+    @include display-flex;
+}
+
+.card-title:first-child {
+    border-top: none;
+    border-radius: $border-radius $border-radius 0 0;
+}
+
+.card-title > *,
+.card-subtitle > * {
+    margin: 0;
+    @include flex(1 0 50%);
+    min-width: 0;
+}
+
+.card-title h2,
+.card-title h3 {
+    @include rem(padding-right, $space-default);
+}
+
+.card-content {
+    @include rem(padding, $space-default);
+}
+
+.card-content.card-content-fitted {
+    padding: 0;
+}
+
+.card-content {
+    & p, & ul, & ol, & pre, & table, & blockquote, & h1, & h2, & h3, & h4, & h5, & h6 {
+        margin: 0;
+    }
+}
+
+.card-content {
+    border-bottom: 1px solid $faint-gray;
+}
+
+.card-content:last-child {
+    border: none;
+    border-radius: 0 0 $border-radius $border-radius;
+}
+
+.card-content.card-content-secondary {
+    background: $light-background;
+}
+
+/**
+* Types
+*/
+
+//Secondary
+.card.card-secondary {
+    background: $light-background;
+    box-shadow: 0 0 0 1px $faint-gray inset;
+}
+
+//Description
+.card.card-description {
+    background: transparent;
+    box-shadow: none;
+}
+
+.card-content.card-content-secondary {
+    background: $light-background;
+}
+
+.card.card-description .card-title,
+.card.card-description .card-content {
+    padding-left: 0;
+}

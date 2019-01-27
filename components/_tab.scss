@@ -1,0 +1,65 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the tab component.
+// -----------------------------------------------------------------------------
+
+.tab {
+    padding-left: 0;
+    list-style: none;
+    position: relative;
+    @include display-flex;
+    @include flex-wrap(nowrap);
+    border-bottom: 1px solid $faint-gray;
+}
+
+.tab-item {
+    @include display-flex;
+    @include flex(0 0 auto);
+}
+
+.tab-item .tab-link {
+    line-height: 1;
+    position: relative;
+    color: $muted;
+    border-bottom: 3px solid transparent;
+    @include rem(padding, $space-m 0);
+    @include rem(margin, 0 $space-s);
+    cursor: pointer;
+    @include transition(all .1s ease);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+        color: $text;
+        border-bottom: 3px solid $gray;
+    }
+
+    &.is-active {
+        color: $blue;
+        border-bottom: 3px solid $blue;
+    }
+}
+
+.tab-item:first-child .tab-link {
+    @include rem(margin-left, $space-m);
+}
+
+.tab-content {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    @include rem(margin, -1px);
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.tab-content.is-active {
+    clip: auto;
+    height: auto;
+    margin: auto;
+    overflow: auto;
+    padding: initial;
+    position: relative;
+    width: auto;
+}

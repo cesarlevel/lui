@@ -1,0 +1,94 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the table component.
+// -----------------------------------------------------------------------------
+
+.table-control {
+    width: 10px;
+    max-width: 100%;
+    min-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+}
+
+.table th {
+    font-weight: $medium;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.table td,
+.table th {
+    @include rem(padding, $space-s $space-s);
+    border-bottom: 1px solid $faint-gray;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+/**
+* States
+*/
+
+//Negative
+.table tr.is-negative td {
+    color: $red;
+}
+
+//Positive
+.table tr.is-positive td {
+    color: $green;
+}
+
+//Numeric
+.table td.is-numeric {
+    font-family: $code-font-stack;
+}
+
+/**
+* Types
+*/
+
+//Hover
+.table.table-hoverable tr:hover td {
+    background: $background;
+}
+
+//Collapsing
+.table.table-collapsed {
+    width: auto;
+}
+
+//Sortable
+.table th:hover.is-sortable {
+    color: $blue;
+    cursor: pointer;
+}
+
+.table th.is-sortable .icon {
+    @include rem(margin-left, $space-s);
+}
+
+//External
+.table td .is-external .icon {
+    @include transition(all .1s ease);
+    @include rem(margin-left, $space-s);
+    @include opacity(0);
+    cursor: pointer;
+}
+
+.table tr:hover td .is-external .icon {
+    visibility: visible;
+    @include opacity(1);
+}
+
+.table tr td:hover .is-external .icon {
+    fill: $blue;
+}

@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the list component.
+// -----------------------------------------------------------------------------
+
+ul, ol { margin: 0; }
+
+.list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.list-item {
+    position: relative;
+    @include display-flex;
+    @include flex-wrap(nowrap);
+    @include rem(margin-bottom, $space-s);
+}
+
+.list-item::before {
+    content: '\2022';
+    @include rem(margin-right, $space-s);
+    color: $gray;
+}
+
+.list-item:last-child {
+    margin-bottom: 0;
+}
+
+// Divided
+.list.list-divided .list-item {
+    @include rem(padding, $space-s 0);
+    margin-bottom: 0;
+}
+
+.list.list-divided .list-item {
+    border-bottom: 1px solid $faint-gray;
+}
+
+.list.list-divided .list-item:last-child {
+    border-bottom: none;
+}
+
+// Hoverable
+.list.list-hoverable .list-item:hover {
+    background: $background;
+}
+
+/**
+* List Group
+*/
+.list.list-group .list-item::before {
+    display: none;
+}
+
+.list.list-group .list-item > * {
+    @include flex(1 0);
+}
+
+.list.list-group .list-item > *.list-item-content-primary {
+    @include flex(2 0);
+}
