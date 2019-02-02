@@ -175,6 +175,20 @@
     }
 }
 
+// Repeater
+// @author Cesar Level
+// @param $property
+
+/* inset example */
+
+// @mixin repeater($property){
+//     @each $value in $spaces {
+//         .#{$property}-#{nth($value, 1)} {
+//             @include rem($property, nth($value, 2)!important);
+//         }
+//     }
+// }
+
 // Center
 // From CSS Tricks https://css-tricks.com/snippets/sass/centering-mixin/
 @mixin center($horizontal: true, $vertical: true) {
