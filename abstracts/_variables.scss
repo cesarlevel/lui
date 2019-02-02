@@ -120,7 +120,7 @@ $spaces: (
     default: $space-default
 );
 
-@mixin repeater($class, $property, $map, $args...){
+@mixin repeater($class, $property, $map, $args...: null){
     @if ($args) {
         @debug #{$args}
     } @else {
