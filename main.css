@@ -2,6 +2,34 @@
 LUI ver 0.1
 Author: Cesar Level, 2018
 */
+.inset-xxs {
+  padding: 2px;
+}
+
+.inset-xs {
+  padding: 4px;
+}
+
+.inset-s {
+  padding: 8px;
+}
+
+.inset-m {
+  padding: 16px;
+}
+
+.inset-l {
+  padding: 32px;
+}
+
+.inset-xl {
+  padding: 64px;
+}
+
+.inset-default {
+  padding: 20px;
+}
+
 /* inset example */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**

@@ -120,18 +120,22 @@ $spaces: (
     default: $space-default
 );
 
-@mixin repeater($class, $property, $map, $args...: null){
-    @if ($args) {
-        @debug #{$args}
+@mixin repeater($class, $property, $map, $args: null, $important: false){
+    $imp: if($important, '!important', '');
+    @if ($args != null) {
+        @each $name, $mapItem in $map {
+            .#{$class}-#{$name} {#{$property}: #{$args}#{$imp}};
+        }
     } @else {
         @each $name, $mapItem in $map {
-            .#{$class}-#{$name} {#{$property}: #{$mapItem}};
+            .#{$class}-#{$name} {#{$property}: #{$mapItem}#{$imp}};
             
         }
     }
 }
 
-@include repeater(inset, padding, $spaces, $space-l $space-m);
+
+@include repeater(inset, padding, $spaces);
 
 // Border radius
 $border-radius: 4px;
