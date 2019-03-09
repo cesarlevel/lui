@@ -120,6 +120,11 @@ $spaces: (
     default: $space-default
 );
 
+// Repeater
+// @author Cesar Level
+// @param $class $property $map, $args, $important
+// @include repeater(inset, padding, $spaces, ($space-m $space-l), $important: true);
+
 @mixin repeater($class, $property, $map, $args: null, $important: false){
     $imp: if($important, '!important', '');
     @if ($args != null) {
