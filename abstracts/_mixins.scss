@@ -66,6 +66,38 @@
 	}
 }
 
+// Repeater
+// @author Cesar Level
+// @param $class $property $map, $args, $important
+// @include repeater(inset, padding, $spaces, ($space-m $space-l), $rem: false);
+
+
+@mixin repeater($class, $property, $map, $args: null, $important: false, $rem: false){
+    $imp: if($important, !important, '');
+    @if ($args != null) {
+        @each $name, $mapItem in $map {
+            @if ($rem) {
+                @debug($imp);
+                .#{$class}-#{$name} {
+                    @include rem($property, append($args, #{$imp}));
+                };
+            } @else {
+                .#{$class}-#{$name} {#{$property}: #{$args}#{$imp}};
+            } 
+        }
+    } @else {
+        @each $name, $mapItem in $map {
+            @if ($rem) {
+                .#{$class}-#{$name} {
+                    @include rem($property, append($mapItem, #{$imp}));
+                };
+            } @else {
+                .#{$class}-#{$name} {#{$property}: #{$mapItem}#{$imp}};
+            }
+        }
+    }
+}
+
 // Browser Prefix
 // @author Cesar Level
 // @param $property $args... - Use on CSS properties that requieres vendor prefixes http://shouldiprefix.com/
