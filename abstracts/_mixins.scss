@@ -70,14 +70,11 @@
 // @author Cesar Level
 // @param $class $property $map, $args, $important
 // @include repeater(inset, padding, $spaces, ($space-m $space-l), $rem: false);
-
-
 @mixin repeater($class, $property, $map, $args: null, $important: false, $rem: false){
     $imp: if($important, !important, '');
     @if ($args != null) {
         @each $name, $mapItem in $map {
             @if ($rem) {
-                @debug($imp);
                 .#{$class}-#{$name} {
                     @include rem($property, append($args, #{$imp}));
                 };
@@ -206,20 +203,6 @@
         }
     }
 }
-
-// Repeater
-// @author Cesar Level
-// @param $property
-
-/* inset example */
-
-// @mixin repeater($property){
-//     @each $value in $spaces {
-//         .#{$property}-#{nth($value, 1)} {
-//             @include rem($property, nth($value, 2)!important);
-//         }
-//     }
-// }
 
 // Center
 // From CSS Tricks https://css-tricks.com/snippets/sass/centering-mixin/

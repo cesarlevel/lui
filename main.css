@@ -2,7 +2,6 @@
 LUI ver 0.1
 Author: Cesar Level, 2018
 */
-/* inset example */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -481,11 +480,6 @@ template {
   padding: 6.4rem 0 0 0 !important;
 }
 
-.inset-default {
-  padding: 64px 0 0 0 !important;
-  padding: 6.4rem 0 0 0 !important;
-}
-
 .test {
   padding: 3px;
   padding: 0.3rem;
@@ -500,7 +494,7 @@ html {
 
 html,
 body {
-  background: #F6F8F9;
+  background: #FFFFFF;
 }
 
 /**
@@ -519,7 +513,7 @@ body {
  * Basic styles for links
  */
 a {
-  color: #0044D4;
+  color: #0033A0;
   text-decoration: none;
 }
 a:hover, a:active, a:focus {
@@ -537,11 +531,11 @@ a:hover, a:active, a:focus {
  * Text Selection
  */
 *::-moz-selection {
-  background: #DCE7FE;
+  background: #0033A0;
 }
 
 *::selection {
-  background: #DCE7FE;
+  background: #0033A0;
 }
 
 html,
@@ -592,8 +586,6 @@ h4,
 h5,
 .h5 {
   font-weight: 700;
-  line-height: 24px;
-  line-height: 2.4rem;
 }
 
 h1,
@@ -684,7 +676,7 @@ sub {
 kbd {
   font-family: "Source Sans Pro", sans-serif;
   border: 0;
-  box-shadow: 0 0 0 1px #C4CED8, 0 0.18em 0 0 #ffffff, 0 0.18em 0 1px #C4CED8;
+  box-shadow: 0 0 0 1px #0D2B3E, 0 0.18em 0 0 #ffffff, 0 0.18em 0 1px #0D2B3E;
   color: #0D2B3E;
   height: auto;
   margin: 0 4px;
@@ -714,17 +706,17 @@ kbd {
 code {
   font-family: "Source Sans Pro", sans-serif;
   white-space: nowrap;
-  color: #00CCC4;
+  color: #0033A0;
   font-weight: 400;
 }
 
 pre {
   display: block;
   border-radius: 4px;
-  box-shadow: 0 0 0 1px #E1E7EA;
+  box-shadow: 0 0 0 1px #0D2B3E;
   padding: 16px 16px 16px 16px;
   padding: 1.6rem 1.6rem 1.6rem 1.6rem;
-  background: #F9FAFB;
+  background: #0D2B3E;
   font-family: "Source Sans Pro", sans-serif;
   overflow: auto;
 }
@@ -875,7 +867,7 @@ pre code {
 * Text color
 */
 .text-muted {
-  color: #6B7384 !important;
+  color: #0D2B3E !important;
 }
 
 /**
@@ -891,11 +883,6 @@ pre code {
 /**
 * Spatial Helpers
 */
-.inset-default {
-  padding: 20px !important;
-  padding: 2rem !important;
-}
-
 .inset-xxs {
   padding: 2px 2px 2px 2px !important;
 }

@@ -80,7 +80,7 @@
 /**
 * Text color
 */
-.text-muted { color: $muted!important; }
+.text-muted { color: $secondary!important; }
 
 /**
 * Text truncated
@@ -94,7 +94,6 @@
 */
 
 
-.inset-default { @include rem(padding, $inset-default!important) };
 .inset-xxs { @include rem(padding, $inset-xxs!important) };
 .inset-xs { @include rem(padding, $inset-xs!important) };
 .inset-s { @include rem(padding, $inset-s!important) };

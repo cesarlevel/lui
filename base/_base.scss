@@ -18,7 +18,7 @@ html {
  // Background color
 html,
 body {
-  background: $background;
+  background: #FFFFFF;
 }
 
 /**
@@ -37,7 +37,7 @@ body {
  * Basic styles for links
  */
 a {
-  color: $blue;
+  color: $primary;
   text-decoration: none;
 
   @include on-event {
@@ -55,5 +55,5 @@ a {
 /**
  * Text Selection
  */
-*::-moz-selection { background: $light-blue }
-*::selection { background: $light-blue; }
+*::-moz-selection { background: $primary }
+*::selection { background: $primary; }

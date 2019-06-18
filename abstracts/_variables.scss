@@ -27,7 +27,7 @@ $h2: 42px;
 $h3: 26px;
 $h4: 16px;
 $h5: 16px;
-$paragraph: 16px;
+$p: 16px;
 
 // REM to PXs
 $baseFontSize: 10; // Based on HTML reset html { font-size: 62.5%; }
@@ -38,49 +38,15 @@ $lh-h2: 48px;
 $lh-h3: 48px;
 $lh-h4: 24px;
 $lh-h5: 24px;
-$lh: 24px;
-$line-height-s: 16px;
-
+$lh-p: 24px;
 
 // Colors
-$brand: #0033A0;
-$text: #0D2B3E;
-$muted: #6B7384;
-$gray: #A1B2C1;
-$light-gray: #C4CED8;
-$faint-gray: #E1E7EA;
-$blue: #0044D4;
-$light-blue: #DCE7FE;
-$yellow: #F1C400;
-$light-yellow: #FFF0AD;
-$green: #00AA13;
-$light-green: #C4F7CA;
-$red: #E53935;
-$light-red: #FFD4D3;
-$accent: #00CCC4;
-$background: #F6F8F9;
-$dark-background: #505A6F;
-$light-background: #F9FAFB;
+$primary: #0033A0;
+$secondary: #0D2B3E;
 
 $colours: (
-    brand               $brand,
-    text                $text,
-    muted               $muted,
-    'gray'                $gray,
-    light-gray          $light-gray,
-    faint-gray          $faint-gray,
-    'blue'                $blue,
-    light-blue          $light-blue,
-    'yellow'              $yellow,
-    light-yellow        $light-yellow,
-    'green'               $green,
-    light-green         $light-green,
-    'red'                 $red,
-    light-red           $light-red,
-    accent              $accent,
-    background          $background,
-    dark-background     $dark-background,
-    light-background    $light-background
+    primary: $primary,
+    secondary: $secondary,
 );
 
 
@@ -88,7 +54,6 @@ $colours: (
 
 // 4-Point Grid Layout space Rules
 // Based on The 8-Point Grid https://spec.fm/specifics/8-pt-grid
-$space-default: 20px;
 $space-xxs: 2px;
 $space-xs: 4px;
 $space-s: 8px;
@@ -96,7 +61,6 @@ $space-m: 16px;
 $space-l: 32px;
 $space-xl: 64px;
 
-$inset-default: 20px;
 $inset-xxs: 2px 2px 2px 2px;
 $inset-xs: 4px 4px 4px 4px;
 $inset-s: 8px 8px 8px 8px;
@@ -117,23 +81,20 @@ $spaces: (
     m: $space-m,
     l: $space-l,
     xl: $space-xl,
-    default: $space-default
 );
 
 // Border radius
 $border-radius: 4px;
-
 
 /// Container's maximum width
 /// @type Length
 $max-width: 1140px !default;
 
 //Z-Index
-$z-modal: 2000;
-$z-top: 1000;
-$z-max: 800;
-$z-mid: 500;
-$z-low: 100;
+$z-5000: 5000;
+$z-1000: 1000;
+$z-500: 500;
+$z-100: 100;
 $z-90: 90;
 $z-80: 80;
 $z-70: 70;

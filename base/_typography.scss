@@ -10,13 +10,13 @@ html, .root {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-size: 62.5%;
-    @include rem(line-height, $lh);
+    @include rem(line-height, $lh-p);
 }
 
 body, .article {
     font-family: $primary-font-stack;
-    @include rem(font-size, $paragraph);
-    @include rem(line-height, $lh);
+    @include rem(font-size, $p);
+    @include rem(line-height, $lh-p);
     font-weight: $regular;
 }
 
@@ -42,7 +42,6 @@ h4,
 h5,
 .h5 {
     font-weight: $bold;
-    @include rem(line-height, $lh);
 }
 
 h1,
@@ -123,8 +122,8 @@ sub {
 kbd {
     font-family: $primary-font-stack;
     border: 0;
-    box-shadow: 0 0 0 1px $light-gray, 0 0.18em 0 0 #ffffff, 0 0.18em 0 1px $light-gray;
-    color: $text;
+    box-shadow: 0 0 0 1px $secondary, 0 0.18em 0 0 #ffffff, 0 0.18em 0 1px $secondary;
+    color: $secondary;
     height: auto;
     @include rem(margin, 0 $space-xs);
     @include rem(font-size, 12px);
@@ -145,20 +144,20 @@ kbd {
 code {
     font-family: $code-font-stack;
     white-space: nowrap;
-    color: $accent;
+    color: $primary;
     font-weight: $regular;
 }
 
 pre {
     display: block;
     border-radius: $border-radius;
-    box-shadow: 0 0 0 1px $faint-gray;
+    box-shadow: 0 0 0 1px $secondary;
     @include rem(padding, $inset-m);
-    background: $light-background;
+    background: $secondary;
     font-family: $code-font-stack;
     overflow: auto;
 }
 
 pre code {
-    color: $text;
+    color: $secondary;
 }
