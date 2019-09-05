@@ -75,9 +75,19 @@
     @if ($args != null) {
         @each $name, $mapItem in $map {
             @if ($rem) {
-                .#{$class}-#{$name} {
-                    @include rem($property, append($args, #{$imp}));
-                };
+
+                // New Code
+                @each $item in $args {
+                    @if (type-of($item) == 'map') {
+                        @debug index($args, $item);
+                    }
+                }
+
+
+                // Old Code
+                // .#{$class}-#{$name} {
+                //     @include rem($property, append($args, #{$imp}));
+                // };
             } @else {
                 .#{$class}-#{$name} {#{$property}: #{$args}#{$imp}};
             } 

@@ -450,34 +450,20 @@ template {
   display: none;
 }
 
-.inset-xxs {
-  padding: 64px 0 0 0 !important;
-  padding: 6.4rem 0 0 0 !important;
+.inset-64px {
+  padding: !important;
 }
 
-.inset-xs {
-  padding: 64px 0 0 0 !important;
-  padding: 6.4rem 0 0 0 !important;
+.inset-0 {
+  padding: !important;
 }
 
-.inset-s {
-  padding: 64px 0 0 0 !important;
-  padding: 6.4rem 0 0 0 !important;
+.inset-0 {
+  padding: !important;
 }
 
-.inset-m {
-  padding: 64px 0 0 0 !important;
-  padding: 6.4rem 0 0 0 !important;
-}
-
-.inset-l {
-  padding: 64px 0 0 0 !important;
-  padding: 6.4rem 0 0 0 !important;
-}
-
-.inset-xl {
-  padding: 64px 0 0 0 !important;
-  padding: 6.4rem 0 0 0 !important;
+.inset-0 {
+  padding: !important;
 }
 
 .test {
@@ -884,51 +870,33 @@ pre code {
 * Spatial Helpers
 */
 .inset-xxs {
-  padding: 2px 2px 2px 2px !important;
+  padding: 2px !important;
+  padding: 0.2rem !important;
 }
 
 .inset-xs {
-  padding: 4px 4px 4px 4px !important;
+  padding: 4px !important;
+  padding: 0.4rem !important;
 }
 
 .inset-s {
-  padding: 8px 8px 8px 8px !important;
+  padding: 8px !important;
+  padding: 0.8rem !important;
 }
 
 .inset-m {
-  padding: 16px 16px 16px 16px !important;
+  padding: 16px !important;
+  padding: 1.6rem !important;
 }
 
 .inset-l {
-  padding: 32px 32px 32px 32px !important;
+  padding: 32px !important;
+  padding: 3.2rem !important;
 }
 
 .inset-xl {
-  padding: 64px 64px 64px 64px !important;
-}
-
-.stack-xxs {
-  margin: 0 0 2px 0 !important;
-}
-
-.stack-xs {
-  margin: 0 0 4px 0 !important;
-}
-
-.stack-s {
-  margin: 0 0 8px 0 !important;
-}
-
-.stack-m {
-  margin: 0 0 16px 0 !important;
-}
-
-.stack-l {
-  margin: 0 0 32px 0 !important;
-}
-
-.stack-xl {
-  margin: 0 0 64px 0 !important;
+  padding: 64px !important;
+  padding: 6.4rem !important;
 }
 
 .inline-xxs {
