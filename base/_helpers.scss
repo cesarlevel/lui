@@ -93,8 +93,9 @@
 * Spatial Helpers
 */
 
-@include repeater(inset, padding, $spaces, $important: true, $rem: true);
-@include repeater(stack, margin, $spaces, ($spaces 0 0 0), $important: true, $rem: true);
+@include repeater(inset, padding, $spaces, $important: false, $rem: true);
+@include repeater(stack, margin, $spaces, ($spaces 0 0 0), $important: false, $rem: true);
+@include repeater(inline, margin, $spaces, (0 $spaces 0 0 ), $important: false, $rem: true);
 
 // .inset-xxs { @include rem(padding, $inset-xxs!important) };
 // .inset-xs { @include rem(padding, $inset-xs!important) };
@@ -108,12 +109,12 @@
 // .stack-m { @include rem(margin, $stack-m!important) };
 // .stack-l { @include rem(margin, $stack-l!important) };
 // .stack-xl { @include rem(margin, $stack-xl!important) };
-.inline-xxs { @include rem(margin, 0 $space-xxs 0 0!important) };
-.inline-xs { @include rem(margin, 0 $space-xs 0 0!important) };
-.inline-s { @include rem(margin, 0 $space-s 0 0!important) };
-.inline-m { @include rem(margin, 0 $space-m 0 0!important) };
-.inline-l { @include rem(margin, 0 $space-l 0 0!important) };
-.inline-xl { @include rem(margin, 0 $space-xl 0 0!important) };
+// .inline-xxs { @include rem(margin, 0 $space-xxs 0 0!important) };
+// .inline-xs { @include rem(margin, 0 $space-xs 0 0!important) };
+// .inline-s { @include rem(margin, 0 $space-s 0 0!important) };
+// .inline-m { @include rem(margin, 0 $space-m 0 0!important) };
+// .inline-l { @include rem(margin, 0 $space-l 0 0!important) };
+// .inline-xl { @include rem(margin, 0 $space-xl 0 0!important) };
 
 /**
 * Flex Helpers

@@ -68,38 +68,45 @@
 
 // Repeater
 // @author Cesar Level
-// @param $class $property $map, $args, $important
-// @include repeater(inset, padding, $spaces, ($space-m $space-l), $rem: false);
+// @param $class: Class name
+// @param $property: CSS Property
+// @param $map: Map of values
+// @param $args: CSS arguments including a map
+// @param $important: Boolean
+// @param $rem: Boolean
+//
+// @include repeater(inset, padding, $spaces, ($spaces 0), $rem: false);
 @mixin repeater($class, $property, $map, $args: null, $important: false, $rem: false){
     $imp: if($important, !important, '');
+    $argsMapIndex: 0;
     @if ($args != null) {
-        @each $name, $mapItem in $map {
-            @if ($rem) {
-
-                // New Code
-                @each $item in $args {
-                    @if (type-of($item) == 'map') {
-                        @debug index($args, $item);
-                    }
-                }
-
-
-                // Old Code
-                // .#{$class}-#{$name} {
-                //     @include rem($property, append($args, #{$imp}));
-                // };
-            } @else {
-                .#{$class}-#{$name} {#{$property}: #{$args}#{$imp}};
-            } 
+        // Finding index of map in arguments
+        @each $item in $args {
+            @if (type-of($item) == 'map') {
+                $argsMapIndex: index($args, $item);
+            }
         }
-    } @else {
-        @each $name, $mapItem in $map {
+        @each $key, $value in nth($args, $argsMapIndex) {
+            $listValues: set-nth($args, $argsMapIndex, $value);
             @if ($rem) {
-                .#{$class}-#{$name} {
-                    @include rem($property, append($mapItem, #{$imp}));
+                .#{$class}-#{$key} {
+                    @include rem($property, append($listValues, #{$imp}));
                 };
             } @else {
-                .#{$class}-#{$name} {#{$property}: #{$mapItem}#{$imp}};
+                .#{$class}-#{$key} {
+                    #{$property}: #{$listValues}#{$imp}
+                };
+            }
+
+        }
+    } @else {
+        @each $key, $value in $map {
+            @if ($rem) {
+                .#{$class}-#{$key} {
+                    @include rem($property, append($value, #{$imp}));
+                };
+            } @else {
+                .#{$class}-#{$key} {#{$property}: #{$value}#{$imp}};
             }
         }
     }
