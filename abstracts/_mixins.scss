@@ -76,7 +76,7 @@
 // @param $rem: Boolean
 //
 // @include repeater(inset, padding, $spaces, ($spaces 0), $rem: false);
-@mixin repeater($class, $property, $map, $args: null, $important: false, $rem: false){
+@mixin map-repeater($class, $property, $map, $args: null, $important: false, $rem: false){
     $imp: if($important, !important, '');
     $argsMapIndex: 0;
     @if ($args != null) {
