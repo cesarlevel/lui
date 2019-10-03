@@ -19,18 +19,6 @@
 .float-none { float: none!important; }
 
 /**
-* Hide text while making it readable for screen readers
-* 1. Needed in WebKit-based browsers because of an implementation bug;
-*    See: https://code.google.com/p/chromium/issues/detail?id=457146
-*/
-.hide-text {
-    overflow: hidden;
-    padding: 0; /* 1 */
-    text-indent: 101%;
-    white-space: nowrap;
-}
-
-/**
 * Hide element while making it readable for screen readers
 * Shamelessly borrowed from HTML5Boilerplate:
 * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
@@ -49,43 +37,65 @@
 /**
 * Text variations
 */
-.italic { font-style: italic!important; }
-.lowercase { text-transform: lowercase!important; }
-.titlecase { text-transform: capitalize!important; }
-.uppercase { text-transform: uppercase!important; }
-.overline { text-decoration: overline!important; }
-.line-through { text-decoration: line-through!important; }
-.underline { text-decoration: underline!important; }
-.no-decoration { text-decoration: none!important; }
+.t-italic { font-style: italic!important; }
+.t-lowercase { text-transform: lowercase!important; }
+.t-titlecase { text-transform: capitalize!important; }
+.t-uppercase { text-transform: uppercase!important; }
+
+/**
+* Text decoration
+*/
+.t-overline { text-decoration: overline!important; }
+.t-line-through { text-decoration: line-through!important; }
+.t-underline { text-decoration: underline!important; }
+.t-no-decoration { text-decoration: none!important; }
+
+/**
+* Hide text while making it readable for screen readers
+* 1. Needed in WebKit-based browsers because of an implementation bug;
+*    See: https://code.google.com/p/chromium/issues/detail?id=457146
+*/
+.t-hide {
+    overflow: hidden;
+    padding: 0; /* 1 */
+    text-indent: 101%;
+    white-space: nowrap;
+}
 
 /**
 * Text wrapping / space
 */
-.break-all { word-break: break-all!important; }
-.keep-all { word-break: keep-all!important; }
-.break-word { word-wrap: break-word!important; }
-.no-wrap { white-space: nowrap!important; }
-.pre { white-space: pre!important; }
-.pre-wrap { white-space: pre-wrap!important; }
-.pre-line { white-space: pre-line!important; }
+.t-break-all { word-break: break-all!important; }
+.t-keep-all { word-break: keep-all!important; }
+.t-break-word { word-wrap: break-word!important; }
+.t-no-wrap { white-space: nowrap!important; }
+.t-pre { white-space: pre!important; }
+.t-pre-wrap { white-space: pre-wrap!important; }
+.t-pre-line { white-space: pre-line!important; }
+@include map-repeater(t-indent, text-indent, $spaces, $important: false, $rem: true);
+
+/**
+* Text overflow
+*/
+.t-elipsis { text-overflow: ellipsis!important; }
 
 /**
 * Text aligment
 */
-.text-right { text-align: right!important; }
-.text-left { text-align: left!important; }
-.text-center { text-align: center!important; }
-.text-justify { text-align: justify!important; }
+.tr { text-align: right!important; }
+.tl { text-align: left!important; }
+.tc { text-align: center!important; }
+.tj { text-align: justify!important; }
 
 /**
 * Text truncated
 */
-.text-truncate {
+.t-truncate {
     @include truncate(100px!important);
 }
 
 /**
-* Box Model
+* Spacing
 */
 
 // Inset
@@ -98,18 +108,18 @@
 @include map-repeater(inline, margin, $spaces, (0 $spaces 0 0 ), $important: false, $rem: true);
 
 // Margin
-@include map-repeater(margin-top, margin-top, $spaces, $important: true, $rem: true);
-@include map-repeater(margin-right, margin-right, $spaces, $important: true, $rem: true);
-@include map-repeater(margin-bottom, margin-bottom, $spaces, $important: true, $rem: true);
-@include map-repeater(margin-left, margin-left, $spaces, $important: true, $rem: true);
+@include map-repeater(mt, margin-top, $spaces, $important: true, $rem: true);
+@include map-repeater(mr, margin-right, $spaces, $important: true, $rem: true);
+@include map-repeater(mb, margin-bottom, $spaces, $important: true, $rem: true);
+@include map-repeater(ml, margin-left, $spaces, $important: true, $rem: true);
 
 // Padding
-@include map-repeater(padding-top, padding-top, $spaces, $important: true, $rem: true);
-@include map-repeater(padding-right, padding-right, $spaces, $important: true, $rem: true);
-@include map-repeater(padding-bottom, padding-bottom, $spaces, $important: true, $rem: true);
-@include map-repeater(padding-left, padding-left, $spaces, $important: true, $rem: true);
+@include map-repeater(pt, padding-top, $spaces, $important: true, $rem: true);
+@include map-repeater(pr, padding-right, $spaces, $important: true, $rem: true);
+@include map-repeater(pb, padding-bottom, $spaces, $important: true, $rem: true);
+@include map-repeater(pl, padding-left, $spaces, $important: true, $rem: true);
 
-// Top, Right, Bottom, Left
+// Position
 @include map-repeater(top, top, $spaces, $important: true, $rem: true);
 @include map-repeater(right, right, $spaces, $important: true, $rem: true);
 @include map-repeater(bottom, bottom, $spaces, $important: true, $rem: true);

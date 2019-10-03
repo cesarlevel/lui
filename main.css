@@ -716,19 +716,6 @@ pre code {
 }
 
 /**
-* Hide text while making it readable for screen readers
-* 1. Needed in WebKit-based browsers because of an implementation bug;
-*    See: https://code.google.com/p/chromium/issues/detail?id=457146
-*/
-.hide-text {
-  overflow: hidden;
-  padding: 0;
-  /* 1 */
-  text-indent: 101%;
-  white-space: nowrap;
-}
-
-/**
 * Hide element while making it readable for screen readers
 * Shamelessly borrowed from HTML5Boilerplate:
 * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
@@ -747,92 +734,145 @@ pre code {
 /**
 * Text variations
 */
-.italic {
+.t-italic {
   font-style: italic !important;
 }
 
-.lowercase {
+.t-lowercase {
   text-transform: lowercase !important;
 }
 
-.titlecase {
+.t-titlecase {
   text-transform: capitalize !important;
 }
 
-.uppercase {
+.t-uppercase {
   text-transform: uppercase !important;
 }
 
-.overline {
+/**
+* Text decoration
+*/
+.t-overline {
   text-decoration: overline !important;
 }
 
-.line-through {
+.t-line-through {
   text-decoration: line-through !important;
 }
 
-.underline {
+.t-underline {
   text-decoration: underline !important;
 }
 
-.no-decoration {
+.t-no-decoration {
   text-decoration: none !important;
+}
+
+/**
+* Hide text while making it readable for screen readers
+* 1. Needed in WebKit-based browsers because of an implementation bug;
+*    See: https://code.google.com/p/chromium/issues/detail?id=457146
+*/
+.t-hide {
+  overflow: hidden;
+  padding: 0;
+  /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
 }
 
 /**
 * Text wrapping / space
 */
-.break-all {
+.t-break-all {
   word-break: break-all !important;
 }
 
-.keep-all {
+.t-keep-all {
   word-break: keep-all !important;
 }
 
-.break-word {
+.t-break-word {
   word-wrap: break-word !important;
 }
 
-.no-wrap {
+.t-no-wrap {
   white-space: nowrap !important;
 }
 
-.pre {
+.t-pre {
   white-space: pre !important;
 }
 
-.pre-wrap {
+.t-pre-wrap {
   white-space: pre-wrap !important;
 }
 
-.pre-line {
+.t-pre-line {
   white-space: pre-line !important;
+}
+
+.t-indent-xxs {
+  text-indent: 2px;
+  text-indent: 0.2rem;
+}
+
+.t-indent-xs {
+  text-indent: 4px;
+  text-indent: 0.4rem;
+}
+
+.t-indent-s {
+  text-indent: 8px;
+  text-indent: 0.8rem;
+}
+
+.t-indent-m {
+  text-indent: 16px;
+  text-indent: 1.6rem;
+}
+
+.t-indent-l {
+  text-indent: 32px;
+  text-indent: 3.2rem;
+}
+
+.t-indent-xl {
+  text-indent: 64px;
+  text-indent: 6.4rem;
+}
+
+/**
+* Text overflow
+*/
+.t-elipsis {
+  text-overflow: ellipsis !important;
 }
 
 /**
 * Text aligment
 */
-.text-right {
+.tr {
   text-align: right !important;
 }
 
-.text-left {
+.tl {
   text-align: left !important;
 }
 
-.text-center {
+.tc {
   text-align: center !important;
 }
 
-.text-justify {
+.tj {
   text-align: justify !important;
 }
 
 /**
 * Text truncated
 */
-.text-truncate {
+.t-truncate {
   max-width: 100px !important;
   white-space: nowrap;
   overflow: hidden;
@@ -840,7 +880,7 @@ pre code {
 }
 
 /**
-* Box Model
+* Spacing
 */
 .inset-xxs {
   padding: 2px;
@@ -932,242 +972,242 @@ pre code {
   margin: 0 6.4rem 0 0;
 }
 
-.margin-top-xxs {
+.mt-xxs {
   margin-top: 2px !important;
   margin-top: 0.2rem !important;
 }
 
-.margin-top-xs {
+.mt-xs {
   margin-top: 4px !important;
   margin-top: 0.4rem !important;
 }
 
-.margin-top-s {
+.mt-s {
   margin-top: 8px !important;
   margin-top: 0.8rem !important;
 }
 
-.margin-top-m {
+.mt-m {
   margin-top: 16px !important;
   margin-top: 1.6rem !important;
 }
 
-.margin-top-l {
+.mt-l {
   margin-top: 32px !important;
   margin-top: 3.2rem !important;
 }
 
-.margin-top-xl {
+.mt-xl {
   margin-top: 64px !important;
   margin-top: 6.4rem !important;
 }
 
-.margin-right-xxs {
+.mr-xxs {
   margin-right: 2px !important;
   margin-right: 0.2rem !important;
 }
 
-.margin-right-xs {
+.mr-xs {
   margin-right: 4px !important;
   margin-right: 0.4rem !important;
 }
 
-.margin-right-s {
+.mr-s {
   margin-right: 8px !important;
   margin-right: 0.8rem !important;
 }
 
-.margin-right-m {
+.mr-m {
   margin-right: 16px !important;
   margin-right: 1.6rem !important;
 }
 
-.margin-right-l {
+.mr-l {
   margin-right: 32px !important;
   margin-right: 3.2rem !important;
 }
 
-.margin-right-xl {
+.mr-xl {
   margin-right: 64px !important;
   margin-right: 6.4rem !important;
 }
 
-.margin-bottom-xxs {
+.mb-xxs {
   margin-bottom: 2px !important;
   margin-bottom: 0.2rem !important;
 }
 
-.margin-bottom-xs {
+.mb-xs {
   margin-bottom: 4px !important;
   margin-bottom: 0.4rem !important;
 }
 
-.margin-bottom-s {
+.mb-s {
   margin-bottom: 8px !important;
   margin-bottom: 0.8rem !important;
 }
 
-.margin-bottom-m {
+.mb-m {
   margin-bottom: 16px !important;
   margin-bottom: 1.6rem !important;
 }
 
-.margin-bottom-l {
+.mb-l {
   margin-bottom: 32px !important;
   margin-bottom: 3.2rem !important;
 }
 
-.margin-bottom-xl {
+.mb-xl {
   margin-bottom: 64px !important;
   margin-bottom: 6.4rem !important;
 }
 
-.margin-left-xxs {
+.ml-xxs {
   margin-left: 2px !important;
   margin-left: 0.2rem !important;
 }
 
-.margin-left-xs {
+.ml-xs {
   margin-left: 4px !important;
   margin-left: 0.4rem !important;
 }
 
-.margin-left-s {
+.ml-s {
   margin-left: 8px !important;
   margin-left: 0.8rem !important;
 }
 
-.margin-left-m {
+.ml-m {
   margin-left: 16px !important;
   margin-left: 1.6rem !important;
 }
 
-.margin-left-l {
+.ml-l {
   margin-left: 32px !important;
   margin-left: 3.2rem !important;
 }
 
-.margin-left-xl {
+.ml-xl {
   margin-left: 64px !important;
   margin-left: 6.4rem !important;
 }
 
-.padding-top-xxs {
+.pt-xxs {
   padding-top: 2px !important;
   padding-top: 0.2rem !important;
 }
 
-.padding-top-xs {
+.pt-xs {
   padding-top: 4px !important;
   padding-top: 0.4rem !important;
 }
 
-.padding-top-s {
+.pt-s {
   padding-top: 8px !important;
   padding-top: 0.8rem !important;
 }
 
-.padding-top-m {
+.pt-m {
   padding-top: 16px !important;
   padding-top: 1.6rem !important;
 }
 
-.padding-top-l {
+.pt-l {
   padding-top: 32px !important;
   padding-top: 3.2rem !important;
 }
 
-.padding-top-xl {
+.pt-xl {
   padding-top: 64px !important;
   padding-top: 6.4rem !important;
 }
 
-.padding-right-xxs {
+.pr-xxs {
   padding-right: 2px !important;
   padding-right: 0.2rem !important;
 }
 
-.padding-right-xs {
+.pr-xs {
   padding-right: 4px !important;
   padding-right: 0.4rem !important;
 }
 
-.padding-right-s {
+.pr-s {
   padding-right: 8px !important;
   padding-right: 0.8rem !important;
 }
 
-.padding-right-m {
+.pr-m {
   padding-right: 16px !important;
   padding-right: 1.6rem !important;
 }
 
-.padding-right-l {
+.pr-l {
   padding-right: 32px !important;
   padding-right: 3.2rem !important;
 }
 
-.padding-right-xl {
+.pr-xl {
   padding-right: 64px !important;
   padding-right: 6.4rem !important;
 }
 
-.padding-bottom-xxs {
+.pb-xxs {
   padding-bottom: 2px !important;
   padding-bottom: 0.2rem !important;
 }
 
-.padding-bottom-xs {
+.pb-xs {
   padding-bottom: 4px !important;
   padding-bottom: 0.4rem !important;
 }
 
-.padding-bottom-s {
+.pb-s {
   padding-bottom: 8px !important;
   padding-bottom: 0.8rem !important;
 }
 
-.padding-bottom-m {
+.pb-m {
   padding-bottom: 16px !important;
   padding-bottom: 1.6rem !important;
 }
 
-.padding-bottom-l {
+.pb-l {
   padding-bottom: 32px !important;
   padding-bottom: 3.2rem !important;
 }
 
-.padding-bottom-xl {
+.pb-xl {
   padding-bottom: 64px !important;
   padding-bottom: 6.4rem !important;
 }
 
-.padding-left-xxs {
+.pl-xxs {
   padding-left: 2px !important;
   padding-left: 0.2rem !important;
 }
 
-.padding-left-xs {
+.pl-xs {
   padding-left: 4px !important;
   padding-left: 0.4rem !important;
 }
 
-.padding-left-s {
+.pl-s {
   padding-left: 8px !important;
   padding-left: 0.8rem !important;
 }
 
-.padding-left-m {
+.pl-m {
   padding-left: 16px !important;
   padding-left: 1.6rem !important;
 }
 
-.padding-left-l {
+.pl-l {
   padding-left: 32px !important;
   padding-left: 3.2rem !important;
 }
 
-.padding-left-xl {
+.pl-xl {
   padding-left: 64px !important;
   padding-left: 6.4rem !important;
 }
