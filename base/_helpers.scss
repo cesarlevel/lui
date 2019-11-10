@@ -4,7 +4,7 @@
 
 /**
 * Clear inner floats
-*/
+* ----------------------------------------------------------------------------- */
 .clearfix::after {
     clear: both;
     content: '';
@@ -13,10 +13,10 @@
 
 /**
 * floats
-*/
-.float-left { float: left!important; }
-.float-right { float: right!important; }
-.float-none { float: none!important; }
+* ----------------------------------------------------------------------------- */
+.float-left { float: left; }
+.float-right { float: right; }
+.float-none { float: none; }
 
 /**
 * Hide element while making it readable for screen readers
@@ -35,27 +35,31 @@
 }
 
 /**
+* Text
+* ----------------------------------------------------------------------------- */
+
+/**
 * Text variations
 */
-.t-italic { font-style: italic!important; }
-.t-lowercase { text-transform: lowercase!important; }
-.t-titlecase { text-transform: capitalize!important; }
-.t-uppercase { text-transform: uppercase!important; }
+.text-italic { font-style: italic; }
+.text-lowercase { text-transform: lowercase; }
+.text-titlecase { text-transform: capitalize; }
+.text-uppercase { text-transform: uppercase; }
 
 /**
 * Text decoration
 */
-.t-overline { text-decoration: overline!important; }
-.t-line-through { text-decoration: line-through!important; }
-.t-underline { text-decoration: underline!important; }
-.t-no-decoration { text-decoration: none!important; }
+.text-overline { text-decoration: overline; }
+.text-line-through { text-decoration: line-through; }
+.text-underline { text-decoration: underline; }
+.text-no-decoration { text-decoration: none; }
 
 /**
 * Hide text while making it readable for screen readers
 * 1. Needed in WebKit-based browsers because of an implementation bug;
 *    See: https://code.google.com/p/chromium/issues/detail?id=457146
 */
-.t-hide {
+.text-hide {
     overflow: hidden;
     padding: 0; /* 1 */
     text-indent: 101%;
@@ -65,94 +69,103 @@
 /**
 * Text wrapping / space
 */
-.t-break-all { word-break: break-all!important; }
-.t-keep-all { word-break: keep-all!important; }
-.t-break-word { word-wrap: break-word!important; }
-.t-no-wrap { white-space: nowrap!important; }
-.t-pre { white-space: pre!important; }
-.t-pre-wrap { white-space: pre-wrap!important; }
-.t-pre-line { white-space: pre-line!important; }
+.text-break-all { word-break: break-all; }
+.text-keep-all { word-break: keep-all; }
+.text-break-word { word-wrap: break-word; }
+.text-no-wrap { white-space: nowrap; }
+.text-pre { white-space: pre; }
+.text-pre-wrap { white-space: pre-wrap; }
+.text-pre-line { white-space: pre-line; }
 @include map-repeater(t-indent, text-indent, $spaces, $important: false, $rem: true);
 
 /**
 * Text overflow
 */
-.t-elipsis { text-overflow: ellipsis!important; }
+.text-elipsis { text-overflow: ellipsis }
 
 /**
 * Text aligment
 */
-.tr { text-align: right!important; }
-.tl { text-align: left!important; }
-.tc { text-align: center!important; }
-.tj { text-align: justify!important; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
 
 /**
 * Text truncated
 */
-.t-truncate {
-    @include truncate(100px!important);
+.text-truncate {
+    @include truncate(100px);
 }
 
 /**
+* Vertical Aligment
+* ----------------------------------------------------------------------------- */
+
+.align-baseline { vertical-align: baseline; }
+.align-top { vertical-align: top; }
+.align-middle { vertical-align: middle; }
+.align-bottom { vertical-align: bottom; }
+
+/**
 * Spacing
-*/
+* ----------------------------------------------------------------------------- */
 
 // Inset
-@include map-repeater(inset, padding, $spaces, $important: false, $rem: true);
+@include map-repeater(inset, padding, $spaces, $rem: true);
 
 // Stack
-@include map-repeater(stack, margin, $spaces, ($spaces 0 0 0), $important: false, $rem: true);
+@include map-repeater(stack, margin, $spaces, ($spaces 0 0 0), $rem: true);
 
 // Inline
-@include map-repeater(inline, margin, $spaces, (0 $spaces 0 0 ), $important: false, $rem: true);
+@include map-repeater(inline, margin, $spaces, (0 $spaces 0 0 ), $rem: true);
 
 // Margin
-@include map-repeater(mt, margin-top, $spaces, $important: true, $rem: true);
-@include map-repeater(mr, margin-right, $spaces, $important: true, $rem: true);
-@include map-repeater(mb, margin-bottom, $spaces, $important: true, $rem: true);
-@include map-repeater(ml, margin-left, $spaces, $important: true, $rem: true);
+@include map-repeater(margin-top, margin-top, $spaces, $rem: true);
+@include map-repeater(margin-right, margin-right, $spaces, $rem: true);
+@include map-repeater(margin-bottom, margin-bottom, $spaces, $rem: true);
+@include map-repeater(margin-left, margin-left, $spaces, $rem: true);
 
 // Padding
-@include map-repeater(pt, padding-top, $spaces, $important: true, $rem: true);
-@include map-repeater(pr, padding-right, $spaces, $important: true, $rem: true);
-@include map-repeater(pb, padding-bottom, $spaces, $important: true, $rem: true);
-@include map-repeater(pl, padding-left, $spaces, $important: true, $rem: true);
+@include map-repeater(padding-top, padding-top, $spaces, $rem: true);
+@include map-repeater(padding-right, padding-right, $spaces, $rem: true);
+@include map-repeater(padding-bottom, padding-bottom, $spaces, $rem: true);
+@include map-repeater(padding-left, padding-left, $spaces, $rem: true);
 
 // Position
-@include map-repeater(top, top, $spaces, $important: true, $rem: true);
-@include map-repeater(right, right, $spaces, $important: true, $rem: true);
-@include map-repeater(bottom, bottom, $spaces, $important: true, $rem: true);
-@include map-repeater(left, left, $spaces, $important: true, $rem: true);
+@include map-repeater(top, top, $spaces, $rem: true);
+@include map-repeater(right, right, $spaces, $rem: true);
+@include map-repeater(bottom, bottom, $spaces, $rem: true);
+@include map-repeater(left, left, $spaces, $rem: true);
 
 
 /**
 * Flex Helpers
-*/
+* ----------------------------------------------------------------------------- */
 .display-flex {
-    @include display-flex($important: true);
+    @include display-flex();
 }
 
 .display-inline-flex {
-    @include display-inline-flex($important: true);
+    @include display-inline-flex();
 }
 
 .no-flex {
     width: auto;
-    @include flex(0 0 auto!important);
+    @include flex(0 0 auto);
 }
 
 .align-items-center {
-    @include align-items(center, $important: true);
+    @include align-items(center);
 }
 
 .justify-content-end {
-    @include justify-content(flex-end, $important: true);
+    @include justify-content(flex-end);
 }
 
 /**
 * Media queries
-*/
+* ----------------------------------------------------------------------------- */
 .hide-on-phone {
     @include media-query-breakpoint('phone', $type: max) {
         display: none;
@@ -244,16 +257,6 @@
 }
 
 /**
-* Object Aligment
-* These classes force text alignment for desired element (and for its inner
-* elements) by assigning text-align CSS property.
-*/
-.align-left { text-align: left!important; }
-.align-right { text-align: right!important; }
-.align-center { text-align: center!important; }
-.align-justify { text-align: justify!important; }
-
-/**
 * Z-Index
-*/
-@include map-repeater(z, z-index, $zIndex, $important: true, $rem: false);
+* ----------------------------------------------------------------------------- */
+@include map-repeater(z, z-index, $zIndex, $rem: false);
