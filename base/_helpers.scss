@@ -117,7 +117,7 @@
 @include map-repeater(stack, margin, $spaces, ($spaces 0 0 0), $rem: true);
 
 // Inline
-@include map-repeater(inline, margin, $spaces, (0 $spaces 0 0 ), $rem: true);
+@include map-repeater(inline, margin, $spaces, (0 $spaces 0 0), $rem: true);
 
 // Margin
 @include map-repeater(margin-top, margin-top, $spaces, $rem: true);
