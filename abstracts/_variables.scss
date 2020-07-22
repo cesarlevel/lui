@@ -41,8 +41,8 @@ $lh-h5: 24px;
 $lh-p: 24px;
 
 // Colors
-$primary: #0033A0;
-$secondary: #0D2B3E;
+$primary: #0044d4;
+$secondary: #0d2b3e;
 
 $colours: (
     primary: $primary,
@@ -52,27 +52,14 @@ $colours: (
 
 // Layout
 
-// 4-Point Grid Layout space Rules
-// Based on The 8-Point Grid https://spec.fm/specifics/8-pt-grid
+// Spatial progression
 $space-xxs: 2px;
 $space-xs: 4px;
 $space-s: 8px;
 $space-m: 16px;
 $space-l: 32px;
 $space-xl: 64px;
-
-$inset-xxs: 2px 2px 2px 2px;
-$inset-xs: 4px 4px 4px 4px;
-$inset-s: 8px 8px 8px 8px;
-$inset-m: 16px 16px 16px 16px;
-$inset-l: 32px 32px 32px 32px;
-$inset-xl: 64px 64px 64px 64px;
-$stack-xxs: 0 0 2px 0;
-$stack-xs: 0 0 4px 0;
-$stack-s: 0 0 8px 0;
-$stack-m: 0 0 16px 0;
-$stack-l: 0 0 32px 0;
-$stack-xl: 0 0 64px 0;
+$space-xxl: 128px;
 
 $spaces: (
     xxs: $space-xxs,
@@ -81,6 +68,7 @@ $spaces: (
     m: $space-m,
     l: $space-l,
     xl: $space-xl,
+    xxl: $space-xxl,
 );
 
 // Border radius

@@ -152,7 +152,7 @@ pre {
     display: block;
     border-radius: $border-radius;
     box-shadow: 0 0 0 1px $secondary;
-    @include rem(padding, $inset-m);
+    @include rem(padding, $space-m);
     background: $secondary;
     font-family: $code-font-stack;
     overflow: auto;
