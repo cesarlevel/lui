@@ -559,14 +559,9 @@ a:hover, a:active, a:focus {
   background: #0044d4;
 }
 
-html,
-body {
-  font-family: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
-}
-
 html, .root {
-  line-height: 30px;
-  line-height: 3rem;
+  line-height: 40px;
+  line-height: 4rem;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
@@ -577,10 +572,10 @@ html, .root {
 }
 
 body, .article {
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 30px;
-  line-height: 3rem;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 40px;
+  line-height: 4rem;
   font-family: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
   font-weight: 400;
 }
@@ -600,12 +595,12 @@ h5,
 
 h1,
 .h1 {
-  font-size: 76px;
-  font-size: 7.6rem;
-  line-height: 90px;
-  line-height: 9rem;
-  margin-top: 30px;
-  margin-bottom: 60px;
+  font-size: 102px;
+  font-size: 10.2rem;
+  line-height: 120px;
+  line-height: 12rem;
+  margin-top: 40px;
+  margin-bottom: 80px;
   font-weight: 700;
 }
 h1:first-child,
@@ -615,12 +610,12 @@ h1:first-child,
 
 h2,
 .h2 {
-  font-size: 47px;
-  font-size: 4.7rem;
-  line-height: 60px;
-  line-height: 6rem;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  font-size: 63px;
+  font-size: 6.3rem;
+  line-height: 80px;
+  line-height: 8rem;
+  margin-top: 40px;
+  margin-bottom: 40px;
   font-weight: 700;
 }
 h2:first-child,
@@ -630,12 +625,12 @@ h2:first-child,
 
 h3,
 .h3 {
-  font-size: 29px;
-  font-size: 2.9rem;
-  line-height: 30px;
-  line-height: 3rem;
-  margin-top: 30px;
-  margin-bottom: 15px;
+  font-size: 39px;
+  font-size: 3.9rem;
+  line-height: 40px;
+  line-height: 4rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
   font-weight: 700;
 }
 h3:first-child,
@@ -645,11 +640,11 @@ h3:first-child,
 
 h4,
 .h4 {
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 30px;
-  line-height: 3rem;
-  margin-top: 30px;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 40px;
+  line-height: 4rem;
+  margin-top: 40px;
   margin-bottom: 0;
   font-weight: 600;
 }
@@ -660,11 +655,11 @@ h4:first-child,
 
 h5,
 .h5 {
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 30px;
-  line-height: 3rem;
-  margin-top: 30px;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 40px;
+  line-height: 4rem;
+  margin-top: 40px;
   margin-bottom: 0;
   font-weight: 600;
 }
@@ -675,7 +670,22 @@ h5:first-child,
 
 p, ul, ol, pre, table, blockquote {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+blockquote {
+  font-style: italic;
+  font-weight: 600;
+  position: relative;
+}
+blockquote::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 6px;
+  background: red;
+  left: -40px;
 }
 
 ul ul, ol ol, ul ol, ol ul {

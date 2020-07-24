@@ -103,6 +103,21 @@ p, ul, ol, pre, table, blockquote {
     margin-bottom: $line-height;
 }
 
+blockquote {
+    font-style: italic;
+    font-weight: $semi-bold;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 6px;
+        background: red;
+        left: -$line-height;
+    }
+}
+
 ul ul, ol ol, ul ol, ol ul {
     margin-top: 0;
     margin-bottom: 0;
