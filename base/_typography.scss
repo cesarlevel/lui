@@ -2,7 +2,13 @@
 // This file contains CSS Typography classes.
 // -----------------------------------------------------------------------------
 
+$line-height: round($font-size * $line-height-factor);
+$h3-font-size: round($font-size * $scale-factor);
+$h2-font-size: round($h3-font-size * $scale-factor);
+$h1-font-size: round($h2-font-size * $scale-factor);
+
 html, .root {
+    @include rem(line-height, $line-height);
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
@@ -10,13 +16,12 @@ html, .root {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-size: 62.5%;
-    @include rem(line-height, $lh-p);
 }
 
 body, .article {
+    @include rem(font-size, $font-size);
+    @include rem(line-height, $line-height);
     font-family: $primary-font-stack;
-    @include rem(font-size, $p);
-    @include rem(line-height, $lh-p);
     font-weight: $regular;
 }
 
@@ -33,65 +38,74 @@ h5,
     font-family: $secondary-font-stack;
 }
 
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5 {
-    font-weight: $bold;
-}
-
 h1,
 .h1 {
-    @include rem(font-size, $h1);
-    @include rem(line-height, $lh-h1);
-    margin-top: 24px;
-    margin-bottom: 48px;
+    @include rem(font-size, $h1-font-size);
+    @include rem(line-height, $line-height * 3);
+    margin-top: $line-height;
+    margin-bottom: $line-height * 2;
+    font-weight: $h1-font-weight;
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 h2,
 .h2 {
-    @include rem(font-size, $h2);
-    @include rem(line-height, $lh-h2);
-    margin-top: 24px;
-    margin-bottom: 24px;
+    @include rem(font-size, $h2-font-size);
+    @include rem(line-height, $line-height * 2);
+    margin-top: $line-height;
+    margin-bottom: $line-height;
+    font-weight: $h2-font-weight;
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 h3,
 .h3 {
-    @include rem(font-size, $h3);
-    @include rem(line-height, $lh-h3);
-    margin-top: 24px;
-    margin-bottom: 0px;
+    @include rem(font-size, $h3-font-size);
+    @include rem(line-height, $line-height);
+    margin-top: $line-height;
+    margin-bottom: $line-height / 2;
+    font-weight: $h3-font-weight;
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 h4,
 .h4 {
-    @include rem(font-size, $h4);
-    @include rem(line-height, $lh-h4);
-    margin-top: 24px;
-    margin-bottom: 0px;
+    @include rem(font-size, $font-size);
+    @include rem(line-height, $line-height);
+    margin-top: $line-height;
+    margin-bottom: 0;
+    font-weight: $h4-font-weight;
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 h5,
 .h5 {
-    @include rem(font-size, $h5);
-    @include rem(line-height, $lh-h5);
-    margin-top: 24px;
-    margin-bottom: 0px;
+    @include rem(font-size, $font-size);
+    @include rem(line-height, $line-height);
+    margin-top: $line-height;
+    margin-bottom: 0;
+    font-weight: $h5-font-weight;
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 p, ul, ol, pre, table, blockquote {
-    margin-top: 0px;
-    margin-bottom: 24px;
+    margin-top: 0;
+    margin-bottom: $line-height;
 }
 
 ul ul, ol ol, ul ol, ol ul {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Let's make sure all's aligned */
@@ -118,28 +132,6 @@ sub {
     bottom: -0.25em;
 }
 
-/* Keyboard keys */
-kbd {
-    font-family: $primary-font-stack;
-    border: 0;
-    box-shadow: 0 0 0 1px $secondary, 0 0.18em 0 0 #ffffff, 0 0.18em 0 1px $secondary;
-    color: $secondary;
-    height: auto;
-    @include rem(margin, 0 $space-xs);
-    @include rem(font-size, 12px);
-    font-weight: $regular;
-    @include rem(line-height, 14px);
-    @include rem(min-width, 22px);
-    @include rem(padding, 3px 7px);
-    background: #FFFFFF;
-    border-radius: $border-radius - 2;
-    box-sizing: border-box;
-    cursor: default;
-    text-align: center;
-    text-transform: capitalize;
-    @include browser-prefix(user-select, none);
-}
-
 /* Code */
 code {
     font-family: $code-font-stack;
@@ -149,10 +141,10 @@ code {
 }
 
 pre {
+    @include rem(padding, $space-m);
     display: block;
     border-radius: $border-radius;
     box-shadow: 0 0 0 1px $secondary;
-    @include rem(padding, $space-m);
     background: $secondary;
     font-family: $code-font-stack;
     overflow: auto;

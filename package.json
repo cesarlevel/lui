@@ -9,6 +9,7 @@
   "devDependencies": {
     "autoprefixer": "^9.8.5",
     "cssnano": "^4.1.10",
+    "lite-server": "^2.5.4",
     "postcss-cli": "^7.1.1"
   },
   "browserslist": [
@@ -26,14 +27,12 @@
       }
     ]
   },
-  "postcss": {
-    "map": false
-  },
   "scripts": {
     "watch": "sass --watch main.scss main.css",
     "autoprefixer": "postcss --map false *.css --use autoprefixer -d build/",
-    "nano": "postcss *.css --use cssnano -d build/",
-    "build": "postcss --map false *.css --use autoprefixer -d build/ && postcss --map false *.css --use cssnano -d build/"
+    "nano": "postcss --map false build/main.css --use cssnano -d build/",
+    "dev": "lite-server & npm run watch",
+    "build": "npm run autoprefixer && npm run nano"
   },
   "repository": {
     "type": "git",

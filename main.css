@@ -1,7 +1,63 @@
 /*
-LUI ver 0.1
-Author: Cesar Level, 2018
+lui ver 0.1
+Author: Cesar Level, 2020
 */
+/**
+ * Font Variables
+ * -----------------------------------------------------------------------------
+ */
+/**
+ * Colors
+ * -----------------------------------------------------------------------------
+ */
+/**
+ * Spatial progression
+ * -----------------------------------------------------------------------------
+ */
+/**
+ * Border
+ * -----------------------------------------------------------------------------
+ */
+/**
+ * z-index
+ * -----------------------------------------------------------------------------
+ */
+/**
+ * Breakpoints
+ * -----------------------------------------------------------------------------
+ */
+/**
+ * Conversion px to rem based on Karl Merkli approach
+ * @author Greg Rickaby
+ */
+/**
+ * Event wrapper
+ * @author Harry Roberts
+ * @param {Bool} $self [false] - Whether or not to include current selector
+ */
+/**
+ * Conversion px to rem
+ * @author Greg Rickaby
+ */
+/**
+ * Map repeater
+ * @author Cesar Level
+ * @param $class: Class name
+ * @param $property: CSS Property
+ * @param $map: Map of values
+ * @param $args: CSS arguments including a map
+ * @param $important: Boolean
+ * @param $rem: Boolean
+ * @include repeater(inset, padding, $spaces, ($spaces 0), $rem: false);
+ */
+/**
+ * Breakpoints
+ * @author Cesar Level
+ */
+/**
+ * Truncate
+ * @author Cesar Level
+ */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -505,11 +561,12 @@ a:hover, a:active, a:focus {
 
 html,
 body {
-  @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
   font-family: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
 }
 
 html, .root {
+  line-height: 30px;
+  line-height: 3rem;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
@@ -517,16 +574,14 @@ html, .root {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 62.5%;
-  line-height: 24px;
-  line-height: 2.4rem;
 }
 
 body, .article {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 24px;
-  line-height: 2.4rem;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 30px;
+  line-height: 3rem;
+  font-family: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
   font-weight: 400;
 }
 
@@ -540,78 +595,92 @@ h4,
 .h4,
 h5,
 .h5 {
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5 {
-  font-weight: 700;
+  font-family: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
 }
 
 h1,
 .h1 {
-  font-size: 68px;
-  font-size: 6.8rem;
-  line-height: 72px;
-  line-height: 7.2rem;
-  margin-top: 24px;
-  margin-bottom: 48px;
+  font-size: 76px;
+  font-size: 7.6rem;
+  line-height: 90px;
+  line-height: 9rem;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+h1:first-child,
+.h1:first-child {
+  margin-top: 0;
 }
 
 h2,
 .h2 {
-  font-size: 42px;
-  font-size: 4.2rem;
-  line-height: 48px;
-  line-height: 4.8rem;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  font-size: 47px;
+  font-size: 4.7rem;
+  line-height: 60px;
+  line-height: 6rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+h2:first-child,
+.h2:first-child {
+  margin-top: 0;
 }
 
 h3,
 .h3 {
-  font-size: 26px;
-  font-size: 2.6rem;
-  line-height: 48px;
-  line-height: 4.8rem;
-  margin-top: 24px;
-  margin-bottom: 0px;
+  font-size: 29px;
+  font-size: 2.9rem;
+  line-height: 30px;
+  line-height: 3rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+h3:first-child,
+.h3:first-child {
+  margin-top: 0;
 }
 
 h4,
 .h4 {
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 24px;
-  line-height: 2.4rem;
-  margin-top: 24px;
-  margin-bottom: 0px;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 30px;
+  line-height: 3rem;
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+h4:first-child,
+.h4:first-child {
+  margin-top: 0;
 }
 
 h5,
 .h5 {
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 24px;
-  line-height: 2.4rem;
-  margin-top: 24px;
-  margin-bottom: 0px;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 30px;
+  line-height: 3rem;
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+h5:first-child,
+.h5:first-child {
+  margin-top: 0;
 }
 
 p, ul, ol, pre, table, blockquote {
-  margin-top: 0px;
-  margin-bottom: 24px;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 ul ul, ol ol, ul ol, ol ul {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* Let's make sure all's aligned */
@@ -638,52 +707,22 @@ sub {
   bottom: -0.25em;
 }
 
-/* Keyboard keys */
-kbd {
-  font-family: "Source Sans Pro", sans-serif;
-  border: 0;
-  box-shadow: 0 0 0 1px #0d2b3e, 0 0.18em 0 0 #ffffff, 0 0.18em 0 1px #0d2b3e;
-  color: #0d2b3e;
-  height: auto;
-  margin: 0 4px;
-  margin: 0 0.4rem;
-  font-size: 12px;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 14px;
-  line-height: 1.4rem;
-  min-width: 22px;
-  min-width: 2.2rem;
-  padding: 3px 7px;
-  padding: 0.3rem 0.7rem;
-  background: #FFFFFF;
-  border-radius: 2px;
-  box-sizing: border-box;
-  cursor: default;
-  text-align: center;
-  text-transform: capitalize;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 /* Code */
 code {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
   white-space: nowrap;
   color: #0044d4;
   font-weight: 400;
 }
 
 pre {
+  padding: 16px;
+  padding: 1.6rem;
   display: block;
   border-radius: 4px;
   box-shadow: 0 0 0 1px #0d2b3e;
-  padding: 16px;
-  padding: 1.6rem;
   background: #0d2b3e;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
   overflow: auto;
 }
 
@@ -816,6 +855,10 @@ pre code {
   white-space: pre-line;
 }
 
+.t-indent-none {
+  text-indent: 0;
+}
+
 .t-indent-xxs {
   text-indent: 2px;
   text-indent: 0.2rem;
@@ -909,6 +952,10 @@ pre code {
 /**
 * Spacing
 * ----------------------------------------------------------------------------- */
+.inset-none {
+  padding: 0;
+}
+
 .inset-xxs {
   padding: 2px;
   padding: 0.2rem;
@@ -942,6 +989,10 @@ pre code {
 .inset-xxl {
   padding: 128px;
   padding: 12.8rem;
+}
+
+.stack-none {
+  margin: 0 0 0 0;
 }
 
 .stack-xxs {
@@ -979,6 +1030,10 @@ pre code {
   margin: 12.8rem 0 0 0;
 }
 
+.inline-none {
+  margin: 0 0 0 0;
+}
+
 .inline-xxs {
   margin: 0 2px 0 0;
   margin: 0 0.2rem 0 0;
@@ -1012,6 +1067,10 @@ pre code {
 .inline-xxl {
   margin: 0 128px 0 0;
   margin: 0 12.8rem 0 0;
+}
+
+.margin-top-none {
+  margin-top: 0;
 }
 
 .margin-top-xxs {
@@ -1049,6 +1108,10 @@ pre code {
   margin-top: 12.8rem;
 }
 
+.margin-right-none {
+  margin-right: 0;
+}
+
 .margin-right-xxs {
   margin-right: 2px;
   margin-right: 0.2rem;
@@ -1082,6 +1145,10 @@ pre code {
 .margin-right-xxl {
   margin-right: 128px;
   margin-right: 12.8rem;
+}
+
+.margin-bottom-none {
+  margin-bottom: 0;
 }
 
 .margin-bottom-xxs {
@@ -1119,6 +1186,10 @@ pre code {
   margin-bottom: 12.8rem;
 }
 
+.margin-left-none {
+  margin-left: 0;
+}
+
 .margin-left-xxs {
   margin-left: 2px;
   margin-left: 0.2rem;
@@ -1152,6 +1223,49 @@ pre code {
 .margin-left-xxl {
   margin-left: 128px;
   margin-left: 12.8rem;
+}
+
+.margin-none {
+  margin: 0;
+}
+
+.margin-xxs {
+  margin: 2px;
+  margin: 0.2rem;
+}
+
+.margin-xs {
+  margin: 4px;
+  margin: 0.4rem;
+}
+
+.margin-s {
+  margin: 8px;
+  margin: 0.8rem;
+}
+
+.margin-m {
+  margin: 16px;
+  margin: 1.6rem;
+}
+
+.margin-l {
+  margin: 32px;
+  margin: 3.2rem;
+}
+
+.margin-xl {
+  margin: 64px;
+  margin: 6.4rem;
+}
+
+.margin-xxl {
+  margin: 128px;
+  margin: 12.8rem;
+}
+
+.padding-top-none {
+  padding-top: 0;
 }
 
 .padding-top-xxs {
@@ -1189,6 +1303,10 @@ pre code {
   padding-top: 12.8rem;
 }
 
+.padding-right-none {
+  padding-right: 0;
+}
+
 .padding-right-xxs {
   padding-right: 2px;
   padding-right: 0.2rem;
@@ -1222,6 +1340,10 @@ pre code {
 .padding-right-xxl {
   padding-right: 128px;
   padding-right: 12.8rem;
+}
+
+.padding-bottom-none {
+  padding-bottom: 0;
 }
 
 .padding-bottom-xxs {
@@ -1259,6 +1381,10 @@ pre code {
   padding-bottom: 12.8rem;
 }
 
+.padding-left-none {
+  padding-left: 0;
+}
+
 .padding-left-xxs {
   padding-left: 2px;
   padding-left: 0.2rem;
@@ -1292,6 +1418,10 @@ pre code {
 .padding-left-xxl {
   padding-left: 128px;
   padding-left: 12.8rem;
+}
+
+.top-none {
+  top: 0;
 }
 
 .top-xxs {
@@ -1329,6 +1459,10 @@ pre code {
   top: 12.8rem;
 }
 
+.right-none {
+  right: 0;
+}
+
 .right-xxs {
   right: 2px;
   right: 0.2rem;
@@ -1364,6 +1498,10 @@ pre code {
   right: 12.8rem;
 }
 
+.bottom-none {
+  bottom: 0;
+}
+
 .bottom-xxs {
   bottom: 2px;
   bottom: 0.2rem;
@@ -1397,6 +1535,10 @@ pre code {
 .bottom-xxl {
   bottom: 128px;
   bottom: 12.8rem;
+}
+
+.left-none {
+  left: 0;
 }
 
 .left-xxs {
@@ -1599,118 +1741,6 @@ pre code {
 /**
 * Media queries
 * ----------------------------------------------------------------------------- */
-@media screen and (max-width: 575px) {
-  .hide-on-phone {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .hide-on-tablet {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 993px) {
-  .hide-on-small-desktop {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1099px) {
-  .hide-on-desktop {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  .hide-on-large-desktop {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .show-on-phone {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .show-on-tablet {
-    display: none;
-  }
-}
-@media screen and (max-width: 1199px) {
-  .show-on-tablet {
-    display: none;
-  }
-}
-@media screen and (max-width: 767px) {
-  .show-on-tablet {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .show-on-small-desktop {
-    display: none;
-  }
-}
-@media screen and (max-width: 1199px) {
-  .show-on-small-desktop {
-    display: none;
-  }
-}
-@media screen and (max-width: 993px) {
-  .show-on-small-desktop {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .show-on-desktop {
-    display: none;
-  }
-}
-@media screen and (max-width: 1199px) {
-  .show-on-desktop {
-    display: none;
-  }
-}
-@media screen and (max-width: 1099px) {
-  .show-on-desktop {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  .show-on-large-desktop {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .equal-widths-elements-mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-pack: flex-start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: flex-start;
-    justify-content: flex-start;
-  }
-}
-.equal-widths-elements-mobile > * {
-  -webkit-box-flex: 1 0;
-  -webkit-flex: 1 0;
-  -ms-flex: 1 0;
-  flex: 1 0;
-}
-
 /**
 * Z-Index
 * ----------------------------------------------------------------------------- */
