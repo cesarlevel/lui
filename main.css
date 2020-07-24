@@ -551,14 +551,6 @@ a:hover, a:active, a:focus {
 /**
  * Text Selection
  */
-*::-moz-selection {
-  background: #0044d4;
-}
-
-*::selection {
-  background: #0044d4;
-}
-
 html, .root {
   line-height: 40px;
   line-height: 4rem;
@@ -590,7 +582,7 @@ h4,
 .h4,
 h5,
 .h5 {
-  font-family: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+  font-family: sans-serif;
 }
 
 h1,
@@ -629,8 +621,8 @@ h3,
   font-size: 3.9rem;
   line-height: 40px;
   line-height: 4rem;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 80px;
+  margin-bottom: 40px;
   font-weight: 700;
 }
 h3:first-child,

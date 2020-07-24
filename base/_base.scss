@@ -48,5 +48,5 @@ a {
 /**
  * Text Selection
  */
-*::-moz-selection { background: $primary }
-*::selection { background: $primary; }
+//*::-moz-selection { background: $primary }
+//*::selection { background: $primary; }
