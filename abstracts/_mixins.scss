@@ -32,7 +32,7 @@
 	$px : ();
 	$rem: ();
 
-	$root: 10; // Based on HTML reset html { font-size: 62.5%; }
+	$root: parseInt($font-size); // Based on HTML reset html { font-size: 62.5%; }
 
 	@each $value in $values {
 		@if $value == 0 or $value == auto {

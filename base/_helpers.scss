@@ -120,17 +120,21 @@
 @include map-repeater(inline, margin, $spaces, (0 $spaces 0 0), $rem: true);
 
 // Margin
-@include map-repeater(margin-top, margin-top, $spaces, $rem: true);
-@include map-repeater(margin-right, margin-right, $spaces, $rem: true);
-@include map-repeater(margin-bottom, margin-bottom, $spaces, $rem: true);
-@include map-repeater(margin-left, margin-left, $spaces, $rem: true);
-@include map-repeater(margin, margin, $spaces, $rem: true);
+@include map-repeater(mt, margin-top, $spaces, $rem: true);
+@include map-repeater(mr, margin-right, $spaces, $rem: true);
+@include map-repeater(mb, margin-bottom, $spaces, $rem: true);
+@include map-repeater(ml, margin-left, $spaces, $rem: true);
+@include map-repeater(m, margin, $spaces, $rem: true);
+//@include map-repeater(mx, margin, $spaces, ($spaces 0 $spaces 0), $rem: true);
+//@include map-repeater(my, margin, $spaces, (0 $spaces 0 $spaces), $rem: true);
 
 // Padding
-@include map-repeater(padding-top, padding-top, $spaces, $rem: true);
-@include map-repeater(padding-right, padding-right, $spaces, $rem: true);
-@include map-repeater(padding-bottom, padding-bottom, $spaces, $rem: true);
-@include map-repeater(padding-left, padding-left, $spaces, $rem: true);
+@include map-repeater(pt, padding-top, $spaces, $rem: true);
+@include map-repeater(pr, padding-right, $spaces, $rem: true);
+@include map-repeater(pb, padding-bottom, $spaces, $rem: true);
+@include map-repeater(pl, padding-left, $spaces, $rem: true);
+//@include map-repeater(px, padding, $spaces, ($spaces 0 $spaces 0), $rem: true);
+//@include map-repeater(py, padding, $spaces, (0 $spaces 0 $spaces), $rem: true);
 
 // Position
 @include map-repeater(top, top, $spaces, $rem: true);

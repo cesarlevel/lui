@@ -15,7 +15,7 @@ html, .root {
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-size: 62.5%;
+    font-size: $font-size;
 }
 
 body, .article {
@@ -42,8 +42,8 @@ h1,
 .h1 {
     @include rem(font-size, $h1-font-size);
     @include rem(line-height, $line-height * 3);
-    margin-top: $line-height;
-    margin-bottom: $line-height * 2;
+    @include rem(margin-top, $line-height);
+    @include rem(margin-bottom, $line-height * 2);
     font-weight: $h1-font-weight;
     &:first-child {
         margin-top: 0;
@@ -54,8 +54,8 @@ h2,
 .h2 {
     @include rem(font-size, $h2-font-size);
     @include rem(line-height, $line-height * 2);
-    margin-top: $line-height;
-    margin-bottom: $line-height;
+    @include rem(margin-top, $line-height);
+    @include rem(margin-bottom, $line-height);
     font-weight: $h2-font-weight;
     &:first-child {
         margin-top: 0;
@@ -66,8 +66,8 @@ h3,
 .h3 {
     @include rem(font-size, $h3-font-size);
     @include rem(line-height, $line-height);
-    margin-top: $line-height * 2;
-    margin-bottom: $line-height;
+    @include rem(margin-top, $line-height * 2);
+    @include rem(margin-bottom, $line-height);
     font-weight: $h3-font-weight;
     &:first-child {
         margin-top: 0;
@@ -78,8 +78,8 @@ h4,
 .h4 {
     @include rem(font-size, $font-size);
     @include rem(line-height, $line-height);
-    margin-top: $line-height;
-    margin-bottom: 0;
+    @include rem(margin-top, $line-height);
+    @include rem(margin-bottom, 0);
     font-weight: $h4-font-weight;
     &:first-child {
         margin-top: 0;
@@ -90,8 +90,8 @@ h5,
 .h5 {
     @include rem(font-size, $font-size);
     @include rem(line-height, $line-height);
-    margin-top: $line-height;
-    margin-bottom: 0;
+    @include rem(margin-top, $line-height);
+    @include rem(margin-bottom, 0);
     font-weight: $h5-font-weight;
     &:first-child {
         margin-top: 0;
