@@ -83,15 +83,19 @@
 @mixin map-repeater($class, $property, $map, $args: null, $important: false, $rem: false){
     $imp: if($important, !important, '');
     $argsMapIndex: 0;
+    $argsMapIndexList: ();
+    $listValues: (0 0 0 0);
     @if ($args != null) {
         // Finding index of map in arguments
-        @each $item in $args {
-            @if (type-of($item) == 'map') {
-                $argsMapIndex: index($args, $item);
+        @for $i from 1 through length($args) {
+            @if (type-of(nth($args, $i)) == 'map') {
+                $argsMapIndexList: append($argsMapIndexList, $i);
             }
         }
-        @each $key, $value in nth($args, $argsMapIndex) {
-            $listValues: set-nth($args, $argsMapIndex, $value);
+        @each $key, $value in $map {
+            @each $index in $argsMapIndexList {
+                $listValues: set-nth($listValues, $index, $value);
+            }
             @if ($rem) {
                 .#{$class}-#{$key} {
                     @include rem($property, append($listValues, #{$imp}));
@@ -101,7 +105,6 @@
                     #{$property}: #{$listValues}#{$imp}
                 };
             }
-
         }
     } @else {
         @each $key, $value in $map {

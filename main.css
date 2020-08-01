@@ -1274,6 +1274,84 @@ pre code {
   margin: 5.3333333333rem;
 }
 
+.mx-0 {
+  margin: 0 0 0 0;
+}
+
+.mx-xxs {
+  margin: 2px 0 2px 0;
+  margin: 0.0833333333rem 0 0.0833333333rem 0;
+}
+
+.mx-xs {
+  margin: 4px 0 4px 0;
+  margin: 0.1666666667rem 0 0.1666666667rem 0;
+}
+
+.mx-s {
+  margin: 8px 0 8px 0;
+  margin: 0.3333333333rem 0 0.3333333333rem 0;
+}
+
+.mx-m {
+  margin: 16px 0 16px 0;
+  margin: 0.6666666667rem 0 0.6666666667rem 0;
+}
+
+.mx-l {
+  margin: 32px 0 32px 0;
+  margin: 1.3333333333rem 0 1.3333333333rem 0;
+}
+
+.mx-xl {
+  margin: 64px 0 64px 0;
+  margin: 2.6666666667rem 0 2.6666666667rem 0;
+}
+
+.mx-xxl {
+  margin: 128px 0 128px 0;
+  margin: 5.3333333333rem 0 5.3333333333rem 0;
+}
+
+.my-0 {
+  margin: 0 0 0 0;
+}
+
+.my-xxs {
+  margin: 0 2px 0 2px;
+  margin: 0 0.0833333333rem 0 0.0833333333rem;
+}
+
+.my-xs {
+  margin: 0 4px 0 4px;
+  margin: 0 0.1666666667rem 0 0.1666666667rem;
+}
+
+.my-s {
+  margin: 0 8px 0 8px;
+  margin: 0 0.3333333333rem 0 0.3333333333rem;
+}
+
+.my-m {
+  margin: 0 16px 0 16px;
+  margin: 0 0.6666666667rem 0 0.6666666667rem;
+}
+
+.my-l {
+  margin: 0 32px 0 32px;
+  margin: 0 1.3333333333rem 0 1.3333333333rem;
+}
+
+.my-xl {
+  margin: 0 64px 0 64px;
+  margin: 0 2.6666666667rem 0 2.6666666667rem;
+}
+
+.my-xxl {
+  margin: 0 128px 0 128px;
+  margin: 0 5.3333333333rem 0 5.3333333333rem;
+}
+
 .pt-0 {
   padding-top: 0;
 }
@@ -1428,6 +1506,84 @@ pre code {
 .pl-xxl {
   padding-left: 128px;
   padding-left: 5.3333333333rem;
+}
+
+.px-0 {
+  padding: 0 0 0 0;
+}
+
+.px-xxs {
+  padding: 2px 0 2px 0;
+  padding: 0.0833333333rem 0 0.0833333333rem 0;
+}
+
+.px-xs {
+  padding: 4px 0 4px 0;
+  padding: 0.1666666667rem 0 0.1666666667rem 0;
+}
+
+.px-s {
+  padding: 8px 0 8px 0;
+  padding: 0.3333333333rem 0 0.3333333333rem 0;
+}
+
+.px-m {
+  padding: 16px 0 16px 0;
+  padding: 0.6666666667rem 0 0.6666666667rem 0;
+}
+
+.px-l {
+  padding: 32px 0 32px 0;
+  padding: 1.3333333333rem 0 1.3333333333rem 0;
+}
+
+.px-xl {
+  padding: 64px 0 64px 0;
+  padding: 2.6666666667rem 0 2.6666666667rem 0;
+}
+
+.px-xxl {
+  padding: 128px 0 128px 0;
+  padding: 5.3333333333rem 0 5.3333333333rem 0;
+}
+
+.py-0 {
+  padding: 0 0 0 0;
+}
+
+.py-xxs {
+  padding: 0 2px 0 2px;
+  padding: 0 0.0833333333rem 0 0.0833333333rem;
+}
+
+.py-xs {
+  padding: 0 4px 0 4px;
+  padding: 0 0.1666666667rem 0 0.1666666667rem;
+}
+
+.py-s {
+  padding: 0 8px 0 8px;
+  padding: 0 0.3333333333rem 0 0.3333333333rem;
+}
+
+.py-m {
+  padding: 0 16px 0 16px;
+  padding: 0 0.6666666667rem 0 0.6666666667rem;
+}
+
+.py-l {
+  padding: 0 32px 0 32px;
+  padding: 0 1.3333333333rem 0 1.3333333333rem;
+}
+
+.py-xl {
+  padding: 0 64px 0 64px;
+  padding: 0 2.6666666667rem 0 2.6666666667rem;
+}
+
+.py-xxl {
+  padding: 0 128px 0 128px;
+  padding: 0 5.3333333333rem 0 5.3333333333rem;
 }
 
 .top-0 {
