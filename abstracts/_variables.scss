@@ -8,13 +8,13 @@
  */
 
 // Primary Font | Body
-$primary-font-stack: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+$primary-font-stack: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 
 // Secondary Font | Headings
-$secondary-font-stack: sans-serif;
+$secondary-font-stack: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 
 // Monospace Font | Code
-$code-font-stack: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+$code-font-stack: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
 
 // Font Weights
 $light: 300;
@@ -25,12 +25,12 @@ $bold: 700;
 // Vertical rhythm, use https://www.gridlover.net/ as playground
 $font-size: 24px;
 $line-height-factor: 1.5;
-$scale-factor: 1.618; // Golden ratio
+$scale-factor: 1.414;
 
 // Weight
 $h1-font-weight: $bold;
 $h2-font-weight: $bold;
-$h3-font-weight: $bold;
+$h3-font-weight: $semi-bold;
 $h4-font-weight: $semi-bold;
 $h5-font-weight: $semi-bold;
 $p-font-weight: $regular;

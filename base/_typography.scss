@@ -9,11 +9,8 @@ $h1-font-size: round($h2-font-size * $scale-factor);
 
 html, .root {
     @include rem(line-height, $line-height);
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
+    font-size-adjust: 0.5;
     -webkit-font-smoothing: antialiased;
     font-size: $font-size;
 }
@@ -54,7 +51,7 @@ h2,
 .h2 {
     @include rem(font-size, $h2-font-size);
     @include rem(line-height, $line-height * 2);
-    @include rem(margin-top, $line-height);
+    @include rem(margin-top, $line-height * 2);
     @include rem(margin-bottom, $line-height);
     font-weight: $h2-font-weight;
     &:first-child {
@@ -125,8 +122,10 @@ ul ul, ol ol, ul ol, ol ul {
 
 /* Let's make sure all's aligned */
 hr {
-    border: 1px solid;
-    margin: -1px 0;
+    border: 0 solid #e2e8f0;
+    border-color: #e2e8f0;
+    border-top-width: 1px;
+    margin: $line-height * 2 0;
 }
 
 a, b, i, strong, em, small, code {
