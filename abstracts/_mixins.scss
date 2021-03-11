@@ -15,7 +15,8 @@
     &:focus {
       @content;
     }
-  } @else {
+  }
+  @else {
     &:hover,
     &:active,
     &:focus {
@@ -29,44 +30,45 @@
  * @author Greg Rickaby
  */
 @mixin rem($property, $values) {
-	$px : ();
-	$rem: ();
+  $px: ();
+  $rem: ();
 
-	$root: parseInt($font-size); // Based on HTML reset html { font-size: 62.5%; }
+  $root: parseInt($font-size);
 
-	@each $value in $values {
-		@if $value == 0 or $value == auto {
-			$px : append($px , $value);
-			$rem: append($rem, $value);
-		}
+  // Based on HTML reset html { font-size: 62.5%; }
 
-		@else if type-of($value) == number {
-			$unit: unit($value);
-			$val: parseInt($value);
+  @each $value in $values {
+    @if $value == 0 or $value == auto {
+      $px: append($px, $value);
+      $rem: append($rem, $value);
+    }
+    @else if type-of($value) == number {
+      $unit: unit($value);
+      $val: parseInt($value);
 
-			@if $unit == "px" {
-				$px : append($px,  $value);
-				$rem: append($rem, ($val / $root + rem));
-			}
+      @if $unit == "px" {
+        $px: append($px, $value);
+        $rem: append($rem, $val / $root + rem);
+      }
 
-			@if $unit == "rem" {
-				$px : append($px,  ($val * $root + px));
-				$rem: append($rem, $value);
-			}
-		}
+      @if $unit == "rem" {
+        $px: append($px, $val * $root + px);
+        $rem: append($rem, $value);
+      }
+    }
+    @else {
+      $px: append($px, $value);
+      $rem: append($rem, $value);
+    }
+  }
 
-		@else {
-			$px : append($px,  $value);
-			$rem: append($rem, $value);
-		}
-	}
-
-	@if $px == $rem {
-		#{$property}: $px;
-	} @else {
-		#{$property}: $px;
-		#{$property}: $rem;
-	}
+  @if $px == $rem {
+    #{$property}: $px;
+  }
+  @else {
+    #{$property}: $px;
+    #{$property}: $rem;
+  }
 }
 
 /**
@@ -80,43 +82,51 @@
  * @param $rem: Boolean
  * @include repeater(inset, padding, $spaces, ($spaces 0), $rem: false);
  */
-@mixin map-repeater($class, $property, $map, $args: null, $important: false, $rem: false){
-    $imp: if($important, !important, '');
-    $argsMapIndex: 0;
-    $argsMapIndexList: ();
-    $listValues: (0 0 0 0);
-    @if ($args != null) {
-        // Finding index of map in arguments
-        @for $i from 1 through length($args) {
-            @if (type-of(nth($args, $i)) == 'map') {
-                $argsMapIndexList: append($argsMapIndexList, $i);
-            }
-        }
-        @each $key, $value in $map {
-            @each $index in $argsMapIndexList {
-                $listValues: set-nth($listValues, $index, $value);
-            }
-            @if ($rem) {
-                .#{$class}-#{$key} {
-                    @include rem($property, append($listValues, #{$imp}));
-                };
-            } @else {
-                .#{$class}-#{$key} {
-                    #{$property}: #{$listValues}#{$imp}
-                };
-            }
-        }
-    } @else {
-        @each $key, $value in $map {
-            @if ($rem) {
-                .#{$class}-#{$key} {
-                    @include rem($property, append($value, #{$imp}));
-                };
-            } @else {
-                .#{$class}-#{$key} {#{$property}: #{$value}#{$imp}};
-            }
-        }
+@mixin map-repeater($class, $property, $map, $args: null, $important: false, $rem: false) {
+  $imp: if($important, !important, "");
+  $argsMapIndex: 0;
+  $argsMapIndexList: ();
+  $listValues: 0 0 0 0;
+
+  @if $args != null {
+    // Finding index of map in arguments
+    @for $i from 1 through length($args) {
+      @if type-of(nth($args, $i)) == "map" {
+        $argsMapIndexList: append($argsMapIndexList, $i);
+      }
     }
+
+    @each $key, $value in $map {
+      @each $index in $argsMapIndexList {
+        $listValues: set-nth($listValues, $index, $value);
+      }
+
+      @if $rem {
+        .#{$class}-#{$key} {
+          @include rem($property, append($listValues, unquote("#{$imp}")));
+        }
+      }
+      @else {
+        .#{$class}-#{$key} {
+          #{$property}: #{$listValues}#{$imp};
+        }
+      }
+    }
+  }
+  @else {
+    @each $key, $value in $map {
+      @if $rem {
+        .#{$class}-#{$key} {
+          @include rem($property, append($value, unquote("#{$imp}")));
+        }
+      }
+      @else {
+        .#{$class}-#{$key} {
+          #{$property}: #{$value}#{$imp};
+        }
+      }
+    }
+  }
 }
 
 /**
@@ -124,15 +134,17 @@
  * @author Cesar Level
  */
 @mixin media-query-breakpoint($width, $type: min) {
-    @if map_has_key($breakpoints, $width) {
-        $width: map_get($breakpoints, $width);
-        @if $type == max {
-            $width: $width - 1px;
-        }
-        @media screen and (#{$type}-width: $width) {
-            @content;
-        }
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type == max {
+      $width: $width - 1px;
     }
+
+    @media screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
 }
 
 /**
@@ -140,8 +152,8 @@
  * @author Cesar Level
  */
 @mixin truncate($truncation-boundary) {
-    max-width: $truncation-boundary;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
