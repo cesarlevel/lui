@@ -3,7 +3,19 @@
 // -----------------------------------------------------------------------------
 
 /**
- * Font Variables
+ * Color
+ * -----------------------------------------------------------------------------
+ */
+ $primary: #0044d4;
+ $secondary: #0d2b3e;
+ 
+ $colors: (
+     primary: $primary,
+     secondary: $secondary,
+ );
+
+/**
+ * Font
  * -----------------------------------------------------------------------------
  */
 
@@ -16,16 +28,20 @@ $secondary-font-stack: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Robot
 // Monospace Font | Code
 $code-font-stack: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
 
+// Font color
+$font-color: $secondary;
+
 // Font Weights
 $light: 300;
 $regular: 400;
 $semi-bold: 600;
 $bold: 700;
 
-// Vertical rhythm, use https://www.gridlover.net/ as playground
-$font-size: 24px;
+// Font size and vertical rhythm,
+// use https://www.gridlover.net/ as playground
+$font-size: 18px;
 $line-height-factor: 1.5;
-$scale-factor: 1.414;
+$scale-factor: 1.618;
 
 // Weight
 $h1-font-weight: $bold;
@@ -35,23 +51,16 @@ $h4-font-weight: $semi-bold;
 $h5-font-weight: $semi-bold;
 $p-font-weight: $regular;
 
-// Leading
-$h1-leading: -1px;
+// Tracking
+$h1-font-tracking: -1px;
+$h2-font-tracking: normal;
+$h3-font-tracking: normal;
+$h4-font-tracking: normal;
+$h5-font-tracking: normal;
+$p-font-tracking: normal;
 
 /**
- * Colors
- * -----------------------------------------------------------------------------
- */
-$primary: #0044d4;
-$secondary: #0d2b3e;
-
-$colors: (
-    primary: $primary,
-    secondary: $secondary,
-);
-
-/**
- * Spatial progression
+ * Spacing
  * -----------------------------------------------------------------------------
  */
 $space-xxs: 2px;

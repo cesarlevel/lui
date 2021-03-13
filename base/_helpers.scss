@@ -12,7 +12,7 @@
 }
 
 /**
-* floats
+* Floats
 * ----------------------------------------------------------------------------- */
 .float-left { float: left; }
 .float-right { float: right; }
@@ -76,7 +76,7 @@
 .text-pre { white-space: pre; }
 .text-pre-wrap { white-space: pre-wrap; }
 .text-pre-line { white-space: pre-line; }
-@include map-repeater(t-indent, text-indent, $spaces, $important: false, $rem: true);
+@include map-repeater(text-indent, text-indent, $spaces, $important: false, $rem: true);
 
 /**
 * Text overflow
@@ -113,13 +113,13 @@
 // Inset
 @include map-repeater(inset, padding, $spaces, $rem: true);
 
-// // Stack
+// Stack
 @include map-repeater(stack, margin, $spaces, ($spaces 0 0 0), $rem: true);
 
-// // Inline
+// Inline
 @include map-repeater(inline, margin, $spaces, (0 $spaces 0 0), $rem: true);
 
-// // Margin
+// Margin
 @include map-repeater(mt, margin-top, $spaces, $rem: true);
 @include map-repeater(mr, margin-right, $spaces, $rem: true);
 @include map-repeater(mb, margin-bottom, $spaces, $rem: true);
@@ -136,7 +136,7 @@
 @include map-repeater(px, padding, $spaces, ($spaces 0 $spaces 0), $rem: true);
 @include map-repeater(py, padding, $spaces, (0 $spaces 0 $spaces), $rem: true);
 
-// // Position
+// Position
 @include map-repeater(top, top, $spaces, $rem: true);
 @include map-repeater(right, right, $spaces, $rem: true);
 @include map-repeater(bottom, bottom, $spaces, $rem: true);
@@ -146,15 +146,18 @@
 /**
 * Display
 * ----------------------------------------------------------------------------- */
+.display-none { display: none; }
 .display-block { display: block; }
 .display-inline-block { display: inline-block; }
 .display-inline { display: inline; }
+.display-flex { display: flex; }
+.display-inline-flex { display: inline-flex; }
+.display-grid { display: grid; }
+.display-table { display: table; }
 
 /**
 * Flexbox Helpers
 * ----------------------------------------------------------------------------- */
-.flex { display: flex }
-.inline-flex { display: inline-flex }
 .flex-column  { flex-direction: column }
 .flex-wrap    { flex-wrap: wrap }
 
@@ -192,12 +195,12 @@
 }
 .flex-none { flex: none }
 
-.order-0 { order: 0 }
-.order-1 { order: 1 }
-.order-2 { order: 2 }
-.order-3 { order: 3 }
-.order-4 { order: 4 }
-.order-last { order: 99999 }
+.flex-order-0 { order: 0 }
+.flex-order-1 { order: 1 }
+.flex-order-2 { order: 2 }
+.flex-order-3 { order: 3 }
+.flex-order-4 { order: 4 }
+.flex-order-last { order: 99999 }
 
 /**
 * Borders

@@ -9,7 +9,7 @@
   "devDependencies": {
     "autoprefixer": "^9.8.5",
     "cssnano": "^4.1.10",
-    "lite-server": "^2.5.4",
+    "lite-server": "^2.6.1",
     "postcss-cli": "^7.1.1"
   },
   "browserslist": [
