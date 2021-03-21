@@ -16,6 +16,7 @@ html, .root {
     -webkit-font-smoothing: antialiased;
     font-size: $font-size;
     color: $font-color;
+    height: 100vh;
 }
 
 body, .article {
@@ -24,6 +25,7 @@ body, .article {
     @include rem(letter-spacing, $p-font-tracking);
     font-family: $primary-font-stack;
     font-weight: $regular;
+    background: repeating-linear-gradient(white, white $line-height - 1, red $line-height, red $line-height);
 }
 
 h1,
@@ -42,7 +44,7 @@ h5,
 h1,
 .h1 {
     @include rem(font-size, $h1-font-size);
-    @include rem(line-height, $line-height * 3);
+    @include rem(line-height, $line-height * 4);
     @include rem(margin-top, $line-height);
     @include rem(margin-bottom, $line-height * 2);
     @include rem(letter-spacing, $h1-font-tracking);
@@ -106,7 +108,7 @@ h5,
 
 p.text-lead {
     @include rem(font-size, $font-size + 4);
-    @include rem(line-height, $line-height + 2);
+    @include rem(line-height, $line-height);
     @include rem(margin-top, $line-height * 2);
     @include rem(margin-bottom, $line-height);
     @include rem(letter-spacing, $p-font-tracking);
@@ -122,6 +124,8 @@ blockquote {
     font-style: italic;
     font-weight: $semi-bold;
     position: relative;
+    margin-left: 0;
+    @include rem(padding-left, $line-height);
     &::before {
         content: '';
         position: absolute;
@@ -129,7 +133,7 @@ blockquote {
         height: 100%;
         width: 4px;
         background: adjust-color($color: grayscale($font-color), $lightness: 70%);
-        left: -$line-height;
+        left: 0;
     }
 }
 
@@ -144,6 +148,7 @@ hr {
     border-color: #e2e8f0;
     border-top-width: 1px;
     margin: $line-height * 2 0;
+    margin-top: $line-height * 2 - 1;
 }
 
 a, b, i, strong, em, small, code {
@@ -177,15 +182,18 @@ code {
 }
 
 pre {
-    @include rem(padding, $space-m);
+    @include rem(padding, $line-height);
     display: block;
     border-radius: $border-radius;
     box-shadow: 0 0 0 1px $secondary;
     background: $secondary;
     font-family: $code-font-stack;
     overflow: auto;
-}
 
-pre code {
-    color: $secondary;
+    code {
+        padding: 0;
+        background: none;
+        color: #ffffff;
+        white-space: pre;
+    }
 }

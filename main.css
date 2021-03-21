@@ -552,23 +552,25 @@ a:hover, a:active, a:focus {
  * Text Selection
  */
 html, .root {
-  line-height: 28px;
-  line-height: 1.5555555556rem;
+  line-height: 24px;
+  line-height: 1.5rem;
   text-size-adjust: 100%;
   font-size-adjust: 0.5;
   -webkit-font-smoothing: antialiased;
-  font-size: 18px;
+  font-size: 16px;
   color: #0d2b3e;
+  height: 100vh;
 }
 
 body, .article {
-  font-size: 18px;
+  font-size: 16px;
   font-size: 1rem;
-  line-height: 28px;
-  line-height: 1.5555555556rem;
+  line-height: 24px;
+  line-height: 1.5rem;
   letter-spacing: normal;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-weight: 400;
+  background: repeating-linear-gradient(white, white 23px, red 24px, red 24px);
 }
 
 h1,
@@ -586,16 +588,16 @@ h5,
 
 h1,
 .h1 {
-  font-size: 62px;
-  font-size: 3.4444444444rem;
-  line-height: 84px;
-  line-height: 4.6666666667rem;
-  margin-top: 28px;
-  margin-top: 1.5555555556rem;
-  margin-bottom: 56px;
-  margin-bottom: 3.1111111111rem;
+  font-size: 54px;
+  font-size: 3.375rem;
+  line-height: 96px;
+  line-height: 6rem;
+  margin-top: 24px;
+  margin-top: 1.5rem;
+  margin-bottom: 48px;
+  margin-bottom: 3rem;
   letter-spacing: -1px;
-  letter-spacing: -0.0555555556rem;
+  letter-spacing: -0.0625rem;
   font-weight: 700;
 }
 h1:first-child,
@@ -605,14 +607,14 @@ h1:first-child,
 
 h2,
 .h2 {
-  font-size: 41px;
-  font-size: 2.2777777778rem;
-  line-height: 56px;
-  line-height: 3.1111111111rem;
-  margin-top: 56px;
-  margin-top: 3.1111111111rem;
-  margin-bottom: 28px;
-  margin-bottom: 1.5555555556rem;
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 48px;
+  line-height: 3rem;
+  margin-top: 48px;
+  margin-top: 3rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   letter-spacing: normal;
   font-weight: 700;
 }
@@ -623,14 +625,14 @@ h2:first-child,
 
 h3,
 .h3 {
-  font-size: 27px;
+  font-size: 24px;
   font-size: 1.5rem;
-  line-height: 56px;
-  line-height: 3.1111111111rem;
-  margin-top: 28px;
-  margin-top: 1.5555555556rem;
-  margin-bottom: 28px;
-  margin-bottom: 1.5555555556rem;
+  line-height: 48px;
+  line-height: 3rem;
+  margin-top: 24px;
+  margin-top: 1.5rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   letter-spacing: normal;
   font-weight: 600;
 }
@@ -641,12 +643,12 @@ h3:first-child,
 
 h4,
 .h4 {
-  font-size: 18px;
+  font-size: 16px;
   font-size: 1rem;
-  line-height: 28px;
-  line-height: 1.5555555556rem;
-  margin-top: 28px;
-  margin-top: 1.5555555556rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  margin-top: 24px;
+  margin-top: 1.5rem;
   margin-bottom: 0;
   letter-spacing: normal;
   font-weight: 600;
@@ -658,12 +660,12 @@ h4:first-child,
 
 h5,
 .h5 {
-  font-size: 18px;
+  font-size: 16px;
   font-size: 1rem;
-  line-height: 28px;
-  line-height: 1.5555555556rem;
-  margin-top: 28px;
-  margin-top: 1.5555555556rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  margin-top: 24px;
+  margin-top: 1.5rem;
   margin-bottom: 0;
   letter-spacing: normal;
   font-weight: 600;
@@ -674,27 +676,30 @@ h5:first-child,
 }
 
 p.text-lead {
-  font-size: 22px;
-  font-size: 1.2222222222rem;
-  line-height: 30px;
-  line-height: 1.6666666667rem;
-  margin-top: 56px;
-  margin-top: 3.1111111111rem;
-  margin-bottom: 28px;
-  margin-bottom: 1.5555555556rem;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  margin-top: 48px;
+  margin-top: 3rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   letter-spacing: normal;
   font-weight: 400;
 }
 
 p, ul, ol, pre, table, blockquote {
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 blockquote {
   font-style: italic;
   font-weight: 600;
   position: relative;
+  margin-left: 0;
+  padding-left: 24px;
+  padding-left: 1.5rem;
 }
 blockquote::before {
   content: "";
@@ -703,7 +708,7 @@ blockquote::before {
   height: 100%;
   width: 4px;
   background: #d8d8d8;
-  left: -28px;
+  left: 0;
 }
 
 ul ul, ol ol, ul ol, ol ul {
@@ -716,7 +721,8 @@ hr {
   border: 0 solid #e2e8f0;
   border-color: #e2e8f0;
   border-top-width: 1px;
-  margin: 56px 0;
+  margin: 48px 0;
+  margin-top: 47px;
 }
 
 a, b, i, strong, em, small, code {
@@ -742,17 +748,17 @@ code {
   font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   white-space: nowrap;
   color: #0d2b3e;
-  padding: 1.6666666667px 5px;
+  padding: 1.3333333333px 4px;
   border-radius: 4px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 16px;
   line-height: 1rem;
   background: #e7e7e7;
 }
 
 pre {
-  padding: 16px;
-  padding: 0.8888888889rem;
+  padding: 24px;
+  padding: 1.5rem;
   display: block;
   border-radius: 4px;
   box-shadow: 0 0 0 1px #0d2b3e;
@@ -760,9 +766,11 @@ pre {
   font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   overflow: auto;
 }
-
 pre code {
-  color: #0d2b3e;
+  padding: 0;
+  background: none;
+  color: #ffffff;
+  white-space: pre;
 }
 
 /**
@@ -896,37 +904,37 @@ pre code {
 
 .text-indent-xxs {
   text-indent: 2px;
-  text-indent: 0.1111111111rem;
+  text-indent: 0.125rem;
 }
 
 .text-indent-xs {
   text-indent: 4px;
-  text-indent: 0.2222222222rem;
+  text-indent: 0.25rem;
 }
 
 .text-indent-s {
   text-indent: 8px;
-  text-indent: 0.4444444444rem;
+  text-indent: 0.5rem;
 }
 
 .text-indent-m {
   text-indent: 16px;
-  text-indent: 0.8888888889rem;
+  text-indent: 1rem;
 }
 
 .text-indent-l {
   text-indent: 32px;
-  text-indent: 1.7777777778rem;
+  text-indent: 2rem;
 }
 
 .text-indent-xl {
   text-indent: 64px;
-  text-indent: 3.5555555556rem;
+  text-indent: 4rem;
 }
 
 .text-indent-xxl {
   text-indent: 128px;
-  text-indent: 7.1111111111rem;
+  text-indent: 8rem;
 }
 
 /**
@@ -993,37 +1001,37 @@ pre code {
 
 .inset-xxs {
   padding: 2px;
-  padding: 0.1111111111rem;
+  padding: 0.125rem;
 }
 
 .inset-xs {
   padding: 4px;
-  padding: 0.2222222222rem;
+  padding: 0.25rem;
 }
 
 .inset-s {
   padding: 8px;
-  padding: 0.4444444444rem;
+  padding: 0.5rem;
 }
 
 .inset-m {
   padding: 16px;
-  padding: 0.8888888889rem;
+  padding: 1rem;
 }
 
 .inset-l {
   padding: 32px;
-  padding: 1.7777777778rem;
+  padding: 2rem;
 }
 
 .inset-xl {
   padding: 64px;
-  padding: 3.5555555556rem;
+  padding: 4rem;
 }
 
 .inset-xxl {
   padding: 128px;
-  padding: 7.1111111111rem;
+  padding: 8rem;
 }
 
 .stack-0 {
@@ -1032,37 +1040,37 @@ pre code {
 
 .stack-xxs {
   margin: 2px 0 0 0;
-  margin: 0.1111111111rem 0 0 0;
+  margin: 0.125rem 0 0 0;
 }
 
 .stack-xs {
   margin: 4px 0 0 0;
-  margin: 0.2222222222rem 0 0 0;
+  margin: 0.25rem 0 0 0;
 }
 
 .stack-s {
   margin: 8px 0 0 0;
-  margin: 0.4444444444rem 0 0 0;
+  margin: 0.5rem 0 0 0;
 }
 
 .stack-m {
   margin: 16px 0 0 0;
-  margin: 0.8888888889rem 0 0 0;
+  margin: 1rem 0 0 0;
 }
 
 .stack-l {
   margin: 32px 0 0 0;
-  margin: 1.7777777778rem 0 0 0;
+  margin: 2rem 0 0 0;
 }
 
 .stack-xl {
   margin: 64px 0 0 0;
-  margin: 3.5555555556rem 0 0 0;
+  margin: 4rem 0 0 0;
 }
 
 .stack-xxl {
   margin: 128px 0 0 0;
-  margin: 7.1111111111rem 0 0 0;
+  margin: 8rem 0 0 0;
 }
 
 .inline-0 {
@@ -1071,37 +1079,37 @@ pre code {
 
 .inline-xxs {
   margin: 0 2px 0 0;
-  margin: 0 0.1111111111rem 0 0;
+  margin: 0 0.125rem 0 0;
 }
 
 .inline-xs {
   margin: 0 4px 0 0;
-  margin: 0 0.2222222222rem 0 0;
+  margin: 0 0.25rem 0 0;
 }
 
 .inline-s {
   margin: 0 8px 0 0;
-  margin: 0 0.4444444444rem 0 0;
+  margin: 0 0.5rem 0 0;
 }
 
 .inline-m {
   margin: 0 16px 0 0;
-  margin: 0 0.8888888889rem 0 0;
+  margin: 0 1rem 0 0;
 }
 
 .inline-l {
   margin: 0 32px 0 0;
-  margin: 0 1.7777777778rem 0 0;
+  margin: 0 2rem 0 0;
 }
 
 .inline-xl {
   margin: 0 64px 0 0;
-  margin: 0 3.5555555556rem 0 0;
+  margin: 0 4rem 0 0;
 }
 
 .inline-xxl {
   margin: 0 128px 0 0;
-  margin: 0 7.1111111111rem 0 0;
+  margin: 0 8rem 0 0;
 }
 
 .mt-0 {
@@ -1110,37 +1118,37 @@ pre code {
 
 .mt-xxs {
   margin-top: 2px;
-  margin-top: 0.1111111111rem;
+  margin-top: 0.125rem;
 }
 
 .mt-xs {
   margin-top: 4px;
-  margin-top: 0.2222222222rem;
+  margin-top: 0.25rem;
 }
 
 .mt-s {
   margin-top: 8px;
-  margin-top: 0.4444444444rem;
+  margin-top: 0.5rem;
 }
 
 .mt-m {
   margin-top: 16px;
-  margin-top: 0.8888888889rem;
+  margin-top: 1rem;
 }
 
 .mt-l {
   margin-top: 32px;
-  margin-top: 1.7777777778rem;
+  margin-top: 2rem;
 }
 
 .mt-xl {
   margin-top: 64px;
-  margin-top: 3.5555555556rem;
+  margin-top: 4rem;
 }
 
 .mt-xxl {
   margin-top: 128px;
-  margin-top: 7.1111111111rem;
+  margin-top: 8rem;
 }
 
 .mr-0 {
@@ -1149,37 +1157,37 @@ pre code {
 
 .mr-xxs {
   margin-right: 2px;
-  margin-right: 0.1111111111rem;
+  margin-right: 0.125rem;
 }
 
 .mr-xs {
   margin-right: 4px;
-  margin-right: 0.2222222222rem;
+  margin-right: 0.25rem;
 }
 
 .mr-s {
   margin-right: 8px;
-  margin-right: 0.4444444444rem;
+  margin-right: 0.5rem;
 }
 
 .mr-m {
   margin-right: 16px;
-  margin-right: 0.8888888889rem;
+  margin-right: 1rem;
 }
 
 .mr-l {
   margin-right: 32px;
-  margin-right: 1.7777777778rem;
+  margin-right: 2rem;
 }
 
 .mr-xl {
   margin-right: 64px;
-  margin-right: 3.5555555556rem;
+  margin-right: 4rem;
 }
 
 .mr-xxl {
   margin-right: 128px;
-  margin-right: 7.1111111111rem;
+  margin-right: 8rem;
 }
 
 .mb-0 {
@@ -1188,37 +1196,37 @@ pre code {
 
 .mb-xxs {
   margin-bottom: 2px;
-  margin-bottom: 0.1111111111rem;
+  margin-bottom: 0.125rem;
 }
 
 .mb-xs {
   margin-bottom: 4px;
-  margin-bottom: 0.2222222222rem;
+  margin-bottom: 0.25rem;
 }
 
 .mb-s {
   margin-bottom: 8px;
-  margin-bottom: 0.4444444444rem;
+  margin-bottom: 0.5rem;
 }
 
 .mb-m {
   margin-bottom: 16px;
-  margin-bottom: 0.8888888889rem;
+  margin-bottom: 1rem;
 }
 
 .mb-l {
   margin-bottom: 32px;
-  margin-bottom: 1.7777777778rem;
+  margin-bottom: 2rem;
 }
 
 .mb-xl {
   margin-bottom: 64px;
-  margin-bottom: 3.5555555556rem;
+  margin-bottom: 4rem;
 }
 
 .mb-xxl {
   margin-bottom: 128px;
-  margin-bottom: 7.1111111111rem;
+  margin-bottom: 8rem;
 }
 
 .ml-0 {
@@ -1227,37 +1235,37 @@ pre code {
 
 .ml-xxs {
   margin-left: 2px;
-  margin-left: 0.1111111111rem;
+  margin-left: 0.125rem;
 }
 
 .ml-xs {
   margin-left: 4px;
-  margin-left: 0.2222222222rem;
+  margin-left: 0.25rem;
 }
 
 .ml-s {
   margin-left: 8px;
-  margin-left: 0.4444444444rem;
+  margin-left: 0.5rem;
 }
 
 .ml-m {
   margin-left: 16px;
-  margin-left: 0.8888888889rem;
+  margin-left: 1rem;
 }
 
 .ml-l {
   margin-left: 32px;
-  margin-left: 1.7777777778rem;
+  margin-left: 2rem;
 }
 
 .ml-xl {
   margin-left: 64px;
-  margin-left: 3.5555555556rem;
+  margin-left: 4rem;
 }
 
 .ml-xxl {
   margin-left: 128px;
-  margin-left: 7.1111111111rem;
+  margin-left: 8rem;
 }
 
 .m-0 {
@@ -1266,37 +1274,37 @@ pre code {
 
 .m-xxs {
   margin: 2px;
-  margin: 0.1111111111rem;
+  margin: 0.125rem;
 }
 
 .m-xs {
   margin: 4px;
-  margin: 0.2222222222rem;
+  margin: 0.25rem;
 }
 
 .m-s {
   margin: 8px;
-  margin: 0.4444444444rem;
+  margin: 0.5rem;
 }
 
 .m-m {
   margin: 16px;
-  margin: 0.8888888889rem;
+  margin: 1rem;
 }
 
 .m-l {
   margin: 32px;
-  margin: 1.7777777778rem;
+  margin: 2rem;
 }
 
 .m-xl {
   margin: 64px;
-  margin: 3.5555555556rem;
+  margin: 4rem;
 }
 
 .m-xxl {
   margin: 128px;
-  margin: 7.1111111111rem;
+  margin: 8rem;
 }
 
 .mx-0 {
@@ -1305,37 +1313,37 @@ pre code {
 
 .mx-xxs {
   margin: 2px 0 2px 0;
-  margin: 0.1111111111rem 0 0.1111111111rem 0;
+  margin: 0.125rem 0 0.125rem 0;
 }
 
 .mx-xs {
   margin: 4px 0 4px 0;
-  margin: 0.2222222222rem 0 0.2222222222rem 0;
+  margin: 0.25rem 0 0.25rem 0;
 }
 
 .mx-s {
   margin: 8px 0 8px 0;
-  margin: 0.4444444444rem 0 0.4444444444rem 0;
+  margin: 0.5rem 0 0.5rem 0;
 }
 
 .mx-m {
   margin: 16px 0 16px 0;
-  margin: 0.8888888889rem 0 0.8888888889rem 0;
+  margin: 1rem 0 1rem 0;
 }
 
 .mx-l {
   margin: 32px 0 32px 0;
-  margin: 1.7777777778rem 0 1.7777777778rem 0;
+  margin: 2rem 0 2rem 0;
 }
 
 .mx-xl {
   margin: 64px 0 64px 0;
-  margin: 3.5555555556rem 0 3.5555555556rem 0;
+  margin: 4rem 0 4rem 0;
 }
 
 .mx-xxl {
   margin: 128px 0 128px 0;
-  margin: 7.1111111111rem 0 7.1111111111rem 0;
+  margin: 8rem 0 8rem 0;
 }
 
 .my-0 {
@@ -1344,37 +1352,37 @@ pre code {
 
 .my-xxs {
   margin: 0 2px 0 2px;
-  margin: 0 0.1111111111rem 0 0.1111111111rem;
+  margin: 0 0.125rem 0 0.125rem;
 }
 
 .my-xs {
   margin: 0 4px 0 4px;
-  margin: 0 0.2222222222rem 0 0.2222222222rem;
+  margin: 0 0.25rem 0 0.25rem;
 }
 
 .my-s {
   margin: 0 8px 0 8px;
-  margin: 0 0.4444444444rem 0 0.4444444444rem;
+  margin: 0 0.5rem 0 0.5rem;
 }
 
 .my-m {
   margin: 0 16px 0 16px;
-  margin: 0 0.8888888889rem 0 0.8888888889rem;
+  margin: 0 1rem 0 1rem;
 }
 
 .my-l {
   margin: 0 32px 0 32px;
-  margin: 0 1.7777777778rem 0 1.7777777778rem;
+  margin: 0 2rem 0 2rem;
 }
 
 .my-xl {
   margin: 0 64px 0 64px;
-  margin: 0 3.5555555556rem 0 3.5555555556rem;
+  margin: 0 4rem 0 4rem;
 }
 
 .my-xxl {
   margin: 0 128px 0 128px;
-  margin: 0 7.1111111111rem 0 7.1111111111rem;
+  margin: 0 8rem 0 8rem;
 }
 
 .pt-0 {
@@ -1383,37 +1391,37 @@ pre code {
 
 .pt-xxs {
   padding-top: 2px;
-  padding-top: 0.1111111111rem;
+  padding-top: 0.125rem;
 }
 
 .pt-xs {
   padding-top: 4px;
-  padding-top: 0.2222222222rem;
+  padding-top: 0.25rem;
 }
 
 .pt-s {
   padding-top: 8px;
-  padding-top: 0.4444444444rem;
+  padding-top: 0.5rem;
 }
 
 .pt-m {
   padding-top: 16px;
-  padding-top: 0.8888888889rem;
+  padding-top: 1rem;
 }
 
 .pt-l {
   padding-top: 32px;
-  padding-top: 1.7777777778rem;
+  padding-top: 2rem;
 }
 
 .pt-xl {
   padding-top: 64px;
-  padding-top: 3.5555555556rem;
+  padding-top: 4rem;
 }
 
 .pt-xxl {
   padding-top: 128px;
-  padding-top: 7.1111111111rem;
+  padding-top: 8rem;
 }
 
 .pr-0 {
@@ -1422,37 +1430,37 @@ pre code {
 
 .pr-xxs {
   padding-right: 2px;
-  padding-right: 0.1111111111rem;
+  padding-right: 0.125rem;
 }
 
 .pr-xs {
   padding-right: 4px;
-  padding-right: 0.2222222222rem;
+  padding-right: 0.25rem;
 }
 
 .pr-s {
   padding-right: 8px;
-  padding-right: 0.4444444444rem;
+  padding-right: 0.5rem;
 }
 
 .pr-m {
   padding-right: 16px;
-  padding-right: 0.8888888889rem;
+  padding-right: 1rem;
 }
 
 .pr-l {
   padding-right: 32px;
-  padding-right: 1.7777777778rem;
+  padding-right: 2rem;
 }
 
 .pr-xl {
   padding-right: 64px;
-  padding-right: 3.5555555556rem;
+  padding-right: 4rem;
 }
 
 .pr-xxl {
   padding-right: 128px;
-  padding-right: 7.1111111111rem;
+  padding-right: 8rem;
 }
 
 .pb-0 {
@@ -1461,37 +1469,37 @@ pre code {
 
 .pb-xxs {
   padding-bottom: 2px;
-  padding-bottom: 0.1111111111rem;
+  padding-bottom: 0.125rem;
 }
 
 .pb-xs {
   padding-bottom: 4px;
-  padding-bottom: 0.2222222222rem;
+  padding-bottom: 0.25rem;
 }
 
 .pb-s {
   padding-bottom: 8px;
-  padding-bottom: 0.4444444444rem;
+  padding-bottom: 0.5rem;
 }
 
 .pb-m {
   padding-bottom: 16px;
-  padding-bottom: 0.8888888889rem;
+  padding-bottom: 1rem;
 }
 
 .pb-l {
   padding-bottom: 32px;
-  padding-bottom: 1.7777777778rem;
+  padding-bottom: 2rem;
 }
 
 .pb-xl {
   padding-bottom: 64px;
-  padding-bottom: 3.5555555556rem;
+  padding-bottom: 4rem;
 }
 
 .pb-xxl {
   padding-bottom: 128px;
-  padding-bottom: 7.1111111111rem;
+  padding-bottom: 8rem;
 }
 
 .pl-0 {
@@ -1500,37 +1508,37 @@ pre code {
 
 .pl-xxs {
   padding-left: 2px;
-  padding-left: 0.1111111111rem;
+  padding-left: 0.125rem;
 }
 
 .pl-xs {
   padding-left: 4px;
-  padding-left: 0.2222222222rem;
+  padding-left: 0.25rem;
 }
 
 .pl-s {
   padding-left: 8px;
-  padding-left: 0.4444444444rem;
+  padding-left: 0.5rem;
 }
 
 .pl-m {
   padding-left: 16px;
-  padding-left: 0.8888888889rem;
+  padding-left: 1rem;
 }
 
 .pl-l {
   padding-left: 32px;
-  padding-left: 1.7777777778rem;
+  padding-left: 2rem;
 }
 
 .pl-xl {
   padding-left: 64px;
-  padding-left: 3.5555555556rem;
+  padding-left: 4rem;
 }
 
 .pl-xxl {
   padding-left: 128px;
-  padding-left: 7.1111111111rem;
+  padding-left: 8rem;
 }
 
 .px-0 {
@@ -1539,37 +1547,37 @@ pre code {
 
 .px-xxs {
   padding: 2px 0 2px 0;
-  padding: 0.1111111111rem 0 0.1111111111rem 0;
+  padding: 0.125rem 0 0.125rem 0;
 }
 
 .px-xs {
   padding: 4px 0 4px 0;
-  padding: 0.2222222222rem 0 0.2222222222rem 0;
+  padding: 0.25rem 0 0.25rem 0;
 }
 
 .px-s {
   padding: 8px 0 8px 0;
-  padding: 0.4444444444rem 0 0.4444444444rem 0;
+  padding: 0.5rem 0 0.5rem 0;
 }
 
 .px-m {
   padding: 16px 0 16px 0;
-  padding: 0.8888888889rem 0 0.8888888889rem 0;
+  padding: 1rem 0 1rem 0;
 }
 
 .px-l {
   padding: 32px 0 32px 0;
-  padding: 1.7777777778rem 0 1.7777777778rem 0;
+  padding: 2rem 0 2rem 0;
 }
 
 .px-xl {
   padding: 64px 0 64px 0;
-  padding: 3.5555555556rem 0 3.5555555556rem 0;
+  padding: 4rem 0 4rem 0;
 }
 
 .px-xxl {
   padding: 128px 0 128px 0;
-  padding: 7.1111111111rem 0 7.1111111111rem 0;
+  padding: 8rem 0 8rem 0;
 }
 
 .py-0 {
@@ -1578,37 +1586,37 @@ pre code {
 
 .py-xxs {
   padding: 0 2px 0 2px;
-  padding: 0 0.1111111111rem 0 0.1111111111rem;
+  padding: 0 0.125rem 0 0.125rem;
 }
 
 .py-xs {
   padding: 0 4px 0 4px;
-  padding: 0 0.2222222222rem 0 0.2222222222rem;
+  padding: 0 0.25rem 0 0.25rem;
 }
 
 .py-s {
   padding: 0 8px 0 8px;
-  padding: 0 0.4444444444rem 0 0.4444444444rem;
+  padding: 0 0.5rem 0 0.5rem;
 }
 
 .py-m {
   padding: 0 16px 0 16px;
-  padding: 0 0.8888888889rem 0 0.8888888889rem;
+  padding: 0 1rem 0 1rem;
 }
 
 .py-l {
   padding: 0 32px 0 32px;
-  padding: 0 1.7777777778rem 0 1.7777777778rem;
+  padding: 0 2rem 0 2rem;
 }
 
 .py-xl {
   padding: 0 64px 0 64px;
-  padding: 0 3.5555555556rem 0 3.5555555556rem;
+  padding: 0 4rem 0 4rem;
 }
 
 .py-xxl {
   padding: 0 128px 0 128px;
-  padding: 0 7.1111111111rem 0 7.1111111111rem;
+  padding: 0 8rem 0 8rem;
 }
 
 .top-0 {
@@ -1617,37 +1625,37 @@ pre code {
 
 .top-xxs {
   top: 2px;
-  top: 0.1111111111rem;
+  top: 0.125rem;
 }
 
 .top-xs {
   top: 4px;
-  top: 0.2222222222rem;
+  top: 0.25rem;
 }
 
 .top-s {
   top: 8px;
-  top: 0.4444444444rem;
+  top: 0.5rem;
 }
 
 .top-m {
   top: 16px;
-  top: 0.8888888889rem;
+  top: 1rem;
 }
 
 .top-l {
   top: 32px;
-  top: 1.7777777778rem;
+  top: 2rem;
 }
 
 .top-xl {
   top: 64px;
-  top: 3.5555555556rem;
+  top: 4rem;
 }
 
 .top-xxl {
   top: 128px;
-  top: 7.1111111111rem;
+  top: 8rem;
 }
 
 .right-0 {
@@ -1656,37 +1664,37 @@ pre code {
 
 .right-xxs {
   right: 2px;
-  right: 0.1111111111rem;
+  right: 0.125rem;
 }
 
 .right-xs {
   right: 4px;
-  right: 0.2222222222rem;
+  right: 0.25rem;
 }
 
 .right-s {
   right: 8px;
-  right: 0.4444444444rem;
+  right: 0.5rem;
 }
 
 .right-m {
   right: 16px;
-  right: 0.8888888889rem;
+  right: 1rem;
 }
 
 .right-l {
   right: 32px;
-  right: 1.7777777778rem;
+  right: 2rem;
 }
 
 .right-xl {
   right: 64px;
-  right: 3.5555555556rem;
+  right: 4rem;
 }
 
 .right-xxl {
   right: 128px;
-  right: 7.1111111111rem;
+  right: 8rem;
 }
 
 .bottom-0 {
@@ -1695,37 +1703,37 @@ pre code {
 
 .bottom-xxs {
   bottom: 2px;
-  bottom: 0.1111111111rem;
+  bottom: 0.125rem;
 }
 
 .bottom-xs {
   bottom: 4px;
-  bottom: 0.2222222222rem;
+  bottom: 0.25rem;
 }
 
 .bottom-s {
   bottom: 8px;
-  bottom: 0.4444444444rem;
+  bottom: 0.5rem;
 }
 
 .bottom-m {
   bottom: 16px;
-  bottom: 0.8888888889rem;
+  bottom: 1rem;
 }
 
 .bottom-l {
   bottom: 32px;
-  bottom: 1.7777777778rem;
+  bottom: 2rem;
 }
 
 .bottom-xl {
   bottom: 64px;
-  bottom: 3.5555555556rem;
+  bottom: 4rem;
 }
 
 .bottom-xxl {
   bottom: 128px;
-  bottom: 7.1111111111rem;
+  bottom: 8rem;
 }
 
 .left-0 {
@@ -1734,37 +1742,37 @@ pre code {
 
 .left-xxs {
   left: 2px;
-  left: 0.1111111111rem;
+  left: 0.125rem;
 }
 
 .left-xs {
   left: 4px;
-  left: 0.2222222222rem;
+  left: 0.25rem;
 }
 
 .left-s {
   left: 8px;
-  left: 0.4444444444rem;
+  left: 0.5rem;
 }
 
 .left-m {
   left: 16px;
-  left: 0.8888888889rem;
+  left: 1rem;
 }
 
 .left-l {
   left: 32px;
-  left: 1.7777777778rem;
+  left: 2rem;
 }
 
 .left-xl {
   left: 64px;
-  left: 3.5555555556rem;
+  left: 4rem;
 }
 
 .left-xxl {
   left: 128px;
-  left: 7.1111111111rem;
+  left: 8rem;
 }
 
 /**
